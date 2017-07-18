@@ -1,10 +1,26 @@
 {
 
   "plugins": [
-  
-  
+
+
+  "-search",
+  "search-pro”,
+  "splitter"
+
+
   ],
   "pluginsConfig": {
+
+
+
+    "search-pro": {
+        "cutWordLib": "nodejieba",
+        "defineWord" : ["Gitbook Use"]
+    }
+
+
+
+
 
 
   }
