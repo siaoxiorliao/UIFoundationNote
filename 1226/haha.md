@@ -7,7 +7,7 @@
 * Bool clipsToBounds 是否裁剪多余的部分
 
 * UIViewContentMode contentMode
-![](/assets/96A67D4A-10A8-491A-A02C-DD82441E5B18.png)
+![](/1226/images/96A67D4A-10A8-491A-A02C-DD82441E5B18.png)
 
 ##### 毛玻璃效果
 ```objectivec
