@@ -1,12 +1,15 @@
-
+// book.json
 {
-"title": "Webpack 中文指南",
-"description": "Webpack 是当下最热门的前端资源模块化管理和打包工具，本书大部分内容翻译自 Webpack 官网。",
+  "title": "Webpack 中文指南",
+  "description": "Webpack 是当下最热门的前端资源模块化管理和打包工具，本书大部分内容翻译自 Webpack 官网。",
+  "language": "zh",
+  "plugins": [
+    "baidu",
+  ],
+  "pluginsConfig": {
 
-"plugins": [
-],
-
-"pluginsConfig": {
-
-}
+    "baidu": {
+        "token": "a9787f0ab45d5e237bab522431d0a7ec"
+    }
+  }
 }
