@@ -1,8 +1,7 @@
 # Summary
 
 ## 介绍
-* [bookIntroduction](README.md)
-* [introduction](introduction.md)
+* [bookIntroduction](introduction.md)
 
 ## 路线
 
