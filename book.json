@@ -18,6 +18,9 @@
 "-search",
 "search-pro", 
 
+"prism",
+"-highlight",
+
 "-sharing",
 
 "anchors",
