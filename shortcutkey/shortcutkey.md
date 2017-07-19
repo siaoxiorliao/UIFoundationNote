@@ -19,6 +19,8 @@ command + shift + N 新建项目
 command + shift + k  clean工程  
 command + shift + 0 打开文档参考
 
+
+
 # storyboard场景快捷键
 
 **option + 滚轮 **
@@ -43,6 +45,3 @@ command + shift + K 只使用模拟器键盘
 command + shift + P 关闭网页编辑
 command + shift + A 打开文件编辑
 command + shift + S 关闭目录编辑
-
-
-
