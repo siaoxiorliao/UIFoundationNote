@@ -1,7 +1,7 @@
 {
-"title" : "siaoxiorliao的学习笔记”,
+"title" : "siaoxiorliao的学习笔记",
 "author" : "siaoxiorliao",
-"description" : "学习笔记”,
+"description" : "学习笔记",
 
 "plugins": [
 
@@ -14,7 +14,6 @@
 
 "simple-page-toc",
 
-"book-summary-scroll-position-saver",
 
 "anchor-navigation-ex",
 
@@ -27,14 +26,14 @@
 
 "tbfed-pagefooter",
 
-"github”,
+"github",
 
 "-search",
 "search-pro",
 
-"anchor-navigation-ex”,
+"anchor-navigation-ex",
 
-"todo”,
+"todo",
 
 "github-buttons"
 
@@ -82,7 +81,7 @@
 },
 
 "github-buttons": {
-            "repo": "zhangjikai/gitbook-use",
+            "repo": "siaoxiorliao/gitbook-use",
             "types": [
                 "star",
                 "watch",
@@ -102,7 +101,7 @@
             "tocLevel1Icon": "fa fa-hand-o-right",
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
-},
+}
 
 
 
