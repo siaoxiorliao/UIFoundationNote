@@ -4,11 +4,14 @@
 "description" : "记录学习过程",
 "plugins": [
 
-"book-summary-scroll-position-saver"
+"simple-page-toc"
 
 ],
   "pluginsConfig": {
-
+"simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        }
 
 
   }
