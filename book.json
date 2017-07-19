@@ -94,9 +94,7 @@
 "github-buttons": {
             "repo": "siaoxiorliao/uifoundationnote",
             "types": [
-                "star",
-                "watch",
-                "fork"
+                "star"
             ],
             "size": "small"
 },
