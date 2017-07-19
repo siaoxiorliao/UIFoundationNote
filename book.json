@@ -4,7 +4,7 @@
 "description" : "记录学习过程",
 "plugins": [
 
-"book-summary-scroll-position-saver",
+"book-summary-scroll-position-saver"
 
 ],
   "pluginsConfig": {
