@@ -1,7 +1,7 @@
 /*
  * Theme 1
  */
-h1 , h2{
+h1 , h2 , h3{
     border-bottom: 1px solid #EFEAEA;
 }
 .color-theme-1 .dropdown-menu {
