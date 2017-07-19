@@ -8,11 +8,7 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 3. 当你更新书的时候,gitBook上会updating,如果update失败,一般是编辑的内容有误,根据错误内容的行数你更改内容就可以再次上传成功
 
 ### 使用注意
-#b 好难用的坑
-b# 你好啊
-# b好难用
-# b 好难用
-#b很好用吗
+
 
 1. 进行增删改最好在Editor中进行,不能再目录中进行,Editor会自动检测改变状况
 2. 每次要增加删除文件记住要先save(保存到本地)和push(上传到gitHub和gitBook),不然会回倒,让人摸不着头脑.
