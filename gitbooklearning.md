@@ -43,39 +43,50 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 },
 
 "plugins": [
-"splitter",
+"splitter",//侧边栏可以收缩
 
 "-search",
-"search-pro", 
+"search-pro", //支持中文搜索
 
-"-sharing",
+"-sharing",//禁用分享
 
-"anchors",
+"anchors",//标题上增加github图标
 
-"simple-page-toc",
+"simple-page-toc",//自动生成本页的目录结构:在需要生成目录的地方加上 <!-- toc -->
 
 
 "anchor-navigation-ex",
 
-"sectionx",
+"sectionx",//将页面分块显示:you should start with h3 if you use heading
 
-"toggle-chapters",
+"toggle-chapters",//使左侧的章节目录可以折叠
 
 "prism",
-"-highlight",
+"-highlight",//使用代码高亮,需要拷贝文件到插件目录,css我使用的在**下方**
 
-"tbfed-pagefooter",
+"tbfed-pagefooter",//底部显示信息
 
-"github",
+"github",//右上角显示github图标
 
 "-search",
 "search-pro",
 
-"anchor-navigation-ex",
+"anchor-navigation-ex",//添加Toc到侧边悬浮导航以及回到顶部按钮。
+/*
+            # h1
+            ## h2
+            ### h3
+            必须要以 h1 开始递进，直接写 h2 不会被提取
+*/
 
 "todo",
+/*
+            添加todo功能
+            - [ ] write some articles
+            - [x] drink a cup of tea
+*/
 
-"github-buttons"
+"github-buttons"//添加项目在 github 上的 star，watch，fork情况
 
 ],
 "pluginsConfig": {
@@ -144,6 +155,14 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 }
 
   }
+}
+```
+
+### website.css
+加入
+```javascript
+h1 , h2{
+    border-bottom: 1px solid #EFEAEA;
 }
 ```
 
