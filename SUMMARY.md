@@ -2,8 +2,7 @@
 
 ## 介绍
 
-* [Introductioni](README.md)
-  * [introduction](README.md)
+* [introduction](README.md)
 
 ## 路线
 
