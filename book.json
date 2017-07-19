@@ -5,7 +5,6 @@
 "output.name": "site",
 "gitbook": "3.2.2",
 "language": "zh-hans",
-"root": ".",
 "links": {
 "sidebar": {
 "Home": "https://www.gitbook.com/@siaoxiorliao1"
