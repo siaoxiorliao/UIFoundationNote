@@ -2,7 +2,6 @@
 "title" : “MyNote”,
 "author" : “siaoxiorliao”,
 "description" : “记录学习过程”,
-"language" : "zh-hans”
 "plugins": [
 "-search”,
 "search-pro”,
@@ -24,7 +23,6 @@
 "github": {
 "url": "https://github.com/siaoxiorliao"
 },
-
 "search-pro": {
 "cutWordLib": "nodejieba",
 "defineWord" : ["Gitbook Use"]
