@@ -76,7 +76,7 @@
 
 "prism": {
 "css": [
-"prismjs/themes/prism-funky.css"
+"prismjs/themes/prism-dark.css"
 ]
 },
 
