@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1226 UILabel/换行/文本框大小随变 · MyNote</title>
+        <title>-开发常用的颜色 · MyNote</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="haha.html" />
+    <link rel="next" href="../shortcutkey/shortcutkey.html" />
     
     
-    <link rel="prev" href="../1225/1225.html" />
+    <link rel="prev" href="quanhuang.html" />
     
 
     </head>
@@ -115,7 +115,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="1226.html">
+        <li class="chapter " data-level="1.3" data-path="1226.html">
             
                 <a href="1226.html">
             
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="yanse.html">
+        <li class="chapter active" data-level="1.3.4" data-path="yanse.html">
             
                 <a href="yanse.html">
             
@@ -242,7 +242,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1226 UILabel/换行/文本框大小随变</a>
+        <a href=".." >-开发常用的颜色</a>
     </h1>
 </div>
 
@@ -257,49 +257,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="1226-uilabel&#x6362;&#x884C;&#x6587;&#x672C;&#x6846;&#x5927;&#x5C0F;&#x968F;&#x53D8;">1226 UILabel/&#x6362;&#x884C;/&#x6587;&#x672C;&#x6846;&#x5927;&#x5C0F;&#x968F;&#x53D8;</h1>
-<h1 id="uilabel">UILabel</h1>
-<h3 id="uilabel&#x5E38;&#x89C1;&#x5C5E;&#x6027;">UILabel&#x5E38;&#x89C1;&#x5C5E;&#x6027;</h3>
-<ul>
-<li>NSString *text &#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;</li>
-<li>UIFont *font &#x5B57;&#x4F53;<blockquote>
-<p>&#x53EF;&#x8BBE;&#x7F6E; &#x6587;&#x5B57;&#x5927;&#x5C0F;&#x6216;&#x7C97;&#x4F53;&#x6216;&#x659C;&#x4F53;</p>
-</blockquote>
-</li>
-<li>UIColor *textColor &#x6587;&#x5B57;&#x7684;&#x989C;&#x8272;</li>
-<li>NSTextAlignment textAlignment &#x5BF9;&#x9F50;&#x6A21;&#x5F0F;(&#x5DE6;&#x53F3;&#x5C45;&#x4E2D;)</li>
-<li>NSInteger numberOfLines &#x6587;&#x5B57;&#x884C;&#x6570;</li>
-<li>NSLineBreakMode lineBreakMode &#x6362;&#x884C;&#x6A21;&#x5F0F;<blockquote>
-<p>clip:&#x76F4;&#x63A5;&#x88C1;&#x526A;
-character Wrap : &#x6839;&#x636E;&#x5B57;&#x8282;&#x6362;&#x884C;(&#x9700;&#x8BBE;&#x7F6E;&#x81EA;&#x52A8;&#x6362;&#x884C;)
-word Wrap: &#x6839;&#x636E;&#x5355;&#x8BCD;&#x6362;&#x884C;(&#x9ED8;&#x8BA4;,&#x9700;&#x8BBE;&#x7F6E;&#x81EA;&#x52A8;&#x6362;&#x884C;)
-Truncate Head: &#x5F00;&#x5934;&#x7701;&#x7565;
-Truncate Middle: &#x4E2D;&#x95F4;&#x7701;&#x7565;
-Truncate tail: &#x7ED3;&#x5C3E;&#x7701;&#x7565;</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="&#x6362;&#x884C;&#x7684;&#x60C5;&#x51B5;-">&#x6362;&#x884C;&#x7684;&#x60C5;&#x51B5; :</h5>
-<ul>
-<li>numberOfLines = 0 -&gt; &#x81EA;&#x52A8;&#x6362;&#x884C;<blockquote>
-<p>&#x5982;&#x679C;&#x6587;&#x5B57;&#x8FC7;&#x591A;,&#x6491;&#x5F00;&#x4E86;&#x6587;&#x672C;&#x6846;,&#x8FD8;&#x662F;&#x4F1A;&#x51FA;&#x73B0;...</p>
-</blockquote>
-</li>
-<li>numberOflines &gt; 0 -&gt;&#x8BBE;&#x7F6E;&#x884C;&#x6570;<blockquote>
-<p>&#x6587;&#x5B57;&#x4F1A;&#x5728;&#x9047;&#x5230;&#x6587;&#x672C;&#x6846;&#x8FB9;&#x7F18;&#x5373;&#x4F1A;&#x6362;&#x884C;,&#x5982;&#x679C;&#x6587;&#x672C;&#x6846;&#x592A;&#x5C0F;&#x6216;&#x8005;&#x884C;&#x6570;&#x592A;&#x5C0F;,&#x4E5F;&#x4F1A;&#x51FA;&#x73B0;...</p>
-</blockquote>
-</li>
-<li>&#x8BBE;&#x7F6E;&#x6587;&#x672C;&#x6846;&#x5927;&#x5C0F;&#x968F;&#x6587;&#x5B57;&#x6539;&#x53D8; + numberOfLines = 0<blockquote>
-<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;...  &#x2193;</p>
-</blockquote>
-</li>
-</ul>
-<pre><code class="lang-objectivec"><span class="hljs-comment">//&#x7B49;&#x5F85;&#x4EE3;&#x7801;</span>
-    <span class="hljs-comment">//lab.numberOfLines = 0;</span>
-    <span class="hljs-comment">//lab.textAlignment = NSTextAlignmentCenter;</span>
-    <span class="hljs-comment">//lab.backgroundColor = [UIColor redColor];</span>
-    <span class="hljs-comment">//lab.shadowOffset = CGSizeMake(100, 200);</span>
-</code></pre>
+                                <h2 id="&#x5F00;&#x53D1;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x989C;&#x8272;">&#x5F00;&#x53D1;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x989C;&#x8272;</h2>
+<p><strong>32&#x4F4D;&#x989C;&#x8272;&#x7EC4;&#x6210;</strong>:
+<img src="images/WX20170718-195511.png" alt=""></p>
+<p><strong>32&#x4F4D;&#x989C;&#x8272;&#x683C;&#x5F0F;</strong>:
+<img src="images/WX20170718-195821.png" alt=""></p>
+<p>24&#x4F4D;&#x662F;&#x53BB;&#x6389;alpha&#x800C;&#x5DF2;</p>
+<p>12&#x4F4D;&#x989C;&#x8272;:
+&#x6BCF;&#x4E2A;&#x989C;&#x8272;&#x5360;4bit
+&#x6BCF;&#x4E2A;&#x989C;&#x8272;&#x901A;&#x9053;&#x53D6;&#x503C;&#x4E3A;0-2&#x7684;4&#x6B21;&#x65B9;-1&#x5373;15</p>
+<p>PNG&#x65E0;&#x635F;
+JPG&#x65E0;&#x635F;(&#x538B;&#x7F29;&#x4E86;alpha&#x901A;&#x9053;)</p>
+<p>&#x5F00;&#x53D1;:
+&#x7EAF;&#x8272;&#x7528;12&#x4F4D;
+&#x8981;&#x7528;&#x5230;alpha&#x5219;24&#x6216;32&#x4F4D;</p>
 
                                 
                                 </section>
@@ -327,12 +298,12 @@ Truncate tail: &#x7ED3;&#x5C3E;&#x7701;&#x7565;</p>
 
             
                 
-                <a href="../1225/1225.html" class="navigation navigation-prev " aria-label="Previous page: 1225 storyboard/控件连线/UIVIew">
+                <a href="quanhuang.html" class="navigation navigation-prev " aria-label="Previous page: -拳皇图片动画实例/音效">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="haha.html" class="navigation navigation-next " aria-label="Next page: -UIImageView/frame/毛玻璃">
+                <a href="../shortcutkey/shortcutkey.html" class="navigation navigation-next " aria-label="Next page: shortcutKey 快捷键集合">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -343,7 +314,7 @@ Truncate tail: &#x7ED3;&#x5C3E;&#x7701;&#x7565;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1226 UILabel/换行/文本框大小随变","level":"1.3","depth":1,"next":{"title":"-UIImageView/frame/毛玻璃","level":"1.3.1","depth":2,"path":"1226/haha.md","ref":"1226/haha.md","articles":[]},"previous":{"title":"1225 storyboard/控件连线/UIVIew","level":"1.2","depth":1,"path":"1225/1225.md","ref":"1225/1225.md","articles":[]},"dir":"ltr"},"config":{"plugins":["book-summary-scroll-position-saver"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"book-summary-scroll-position-saver":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"siaoxiorliao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MyNote","gitbook":"*","description":"记录学习过程"},"file":{"path":"1226/1226.md","mtime":"2017-07-18T13:51:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-19T03:00:02.864Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"-开发常用的颜色","level":"1.3.4","depth":2,"next":{"title":"shortcutKey 快捷键集合","level":"1.4","depth":1,"path":"shortcutkey/shortcutkey.md","ref":"shortcutkey/shortcutkey.md","articles":[]},"previous":{"title":"-拳皇图片动画实例/音效","level":"1.3.3","depth":2,"path":"1226/quanhuang.md","ref":"1226/quanhuang.md","articles":[]},"dir":"ltr"},"config":{"plugins":["book-summary-scroll-position-saver"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"book-summary-scroll-position-saver":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"siaoxiorliao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MyNote","gitbook":"*","description":"记录学习过程"},"file":{"path":"1226/yanse.md","mtime":"2017-07-18T14:14:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-19T03:00:02.864Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
