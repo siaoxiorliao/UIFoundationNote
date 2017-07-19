@@ -27,10 +27,13 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 **当你需要重新安装或者删除插件时,你要先把你生成的本地化的书删除,才能重新安装**
 
 **#一个超级巨大的坑: "这个符号一定要对....**
+
 ### 我的book.json
+
 **要使用,删除注释**
 
 ```javascript
+
 {
 "title" : "siaoxiorliao的学习笔记",
 "author" : "siaoxiorliao",
@@ -161,10 +164,13 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 
   }
 }
+
 ```
 
 ### website.css
+
 加入
+
 ```javascript
 h1 , h2{
     border-bottom: 1px solid #EFEAEA;
@@ -173,7 +179,9 @@ h1 , h2{
 
 
 ### xonokai.css
+
 ```javascript
+
 /**
 * xonokai theme for JavaScript, CSS and HTML
 * based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -338,5 +346,6 @@ pre[data-line] .line-highlight[data-end]:after {
     top: auto;
     bottom: .4em;
 }
+
 ```
 
