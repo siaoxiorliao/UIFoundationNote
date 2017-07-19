@@ -6,9 +6,6 @@
 "gitbook": "3.2.2",
 "language": "zh-hans",
 "root": ".",
-"structure": {
-"readme": "introduction.md"
-},
 "links": {
 "sidebar": {
 "Home": "https://www.gitbook.com/@siaoxiorliao1"
