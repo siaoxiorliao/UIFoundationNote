@@ -2,8 +2,22 @@
 "title" : "siaoxiorliao的学习笔记",
 "author" : "siaoxiorliao",
 "description" : "学习笔记",
+"output.name": "site",
+"gitbook": "3.2.2",
+"language": "zh-hans",
+"root": ".",
+"structure" : {
+"readme": "introduction.md"
+},
+
+"links": {
+"sidebar": {
+"Home": "https://www.gitbook.com/@siaoxiorliao1"
+}
+},
 
 "plugins": [
+"splitter",
 
 "-search",
 "search-pro", 
@@ -38,7 +52,7 @@
 "github-buttons"
 
 ],
-  "pluginsConfig": {
+"pluginsConfig": {
 
 "search-pro": {
 "cutWordLib": "nodejieba",
