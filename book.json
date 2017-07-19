@@ -76,7 +76,7 @@
 
 "prism": {
             "css": [
-                ""
+                ".prism-themes/xonokai.css"
             ]
 },
 
