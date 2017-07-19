@@ -97,6 +97,13 @@
             "size": "small"
 },
 
+"
+prism": {
+"css": [
+"xonokai.css"
+]
+},
+
 "search-pro": {
 "cutWordLib": "nodejieba",
 "defineWord" : ["Gitbook Use"]
