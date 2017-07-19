@@ -4,33 +4,11 @@
 "description" : "记录学习过程",
 "plugins": [
 
-"-search",
-"search-pro",
+"book-summary-scroll-position-saver",
 
-"anchors”,/*标题带有锚点*\
-"splitter",
-
-
-"-sharing",
-"-highlight",
-"toggle-chapters",
-
-"tbfed-pagefooter",
-"github"
 ],
   "pluginsConfig": {
-"tbfed-pagefooter": {
-"copyright":"Copyright &copy siaoxiorliao 2017",
-"modify_label": "该文件修订时间：",
-"modify_format": "YYYY-MM-DD HH:mm:ss"
-},
-"github": {
-"url": "https://github.com/siaoxiorliao"
-},
-"search-pro": {
-"cutWordLib": "nodejieba",
-"defineWord" : ["Gitbook Use"]
-}
+
 
 
   }
