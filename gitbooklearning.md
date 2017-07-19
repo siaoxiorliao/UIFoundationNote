@@ -25,7 +25,7 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 
 **#一个超级巨大的坑: "这个符号一定要对....**
 ### 我的book.json
-**使用请删除注释**
+**要使用,删除注释**
 
 ```javascript
 {
