@@ -38,3 +38,11 @@ command + control + Z 模拟器抖动
 command + K 使用系统键盘或系统和模拟器键盘同时使用  
 command + shift + K 只使用模拟器键盘
 
+##Editor 快捷键
+
+command + shift + P 关闭网页编辑
+command + shift + A 打开文件编辑
+command + shift + S 关闭目录编辑
+
+
+
