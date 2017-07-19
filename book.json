@@ -74,11 +74,7 @@
           "tag": "b"
 },
 
-"prism": {
-            "css": [
-                ".prism-themes/xonokai.css"
-            ]
-},
+
 
 "tbfed-pagefooter": {
 "copyright":"Copyright &copy siaoxiorliao 2017",
