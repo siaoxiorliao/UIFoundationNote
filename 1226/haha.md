@@ -1,6 +1,6 @@
 <!-- toc -->
 # UIImageView
-### UIImageView常见属性
+## UIImageView常见属性
 * UIImage *image 显示的图片
 * NSArray *animationImages 显示的动画图片
 * NSInteger animationRepeatCount 动画播放次数(默认0是无限播放)
