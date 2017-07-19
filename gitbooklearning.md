@@ -116,11 +116,13 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
           "tag": "b"
 },
 
+/*
 "prism": {
             "css": [
                 "prism-themes/xonokai.css"
             ]
 },
+*/
 
 "tbfed-pagefooter": {
 "copyright":"Copyright &copy siaoxiorliao 2017",
@@ -169,7 +171,7 @@ h1 , h2{
 
 
 ### xonokai.css
-```
+```javascript
 /**
 * xonokai theme for JavaScript, CSS and HTML
 * based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
