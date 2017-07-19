@@ -99,7 +99,7 @@
 
 "prism": {
 "css": [
-"xonokai.css"
+"prismjs/themes/prism-dark.cssxonokai.css"
 ]
 },
 
