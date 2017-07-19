@@ -1,20 +1,114 @@
 {
-"title" : "MyNote",
+"title" : "siaoxiorliao的学习笔记”,
 "author" : "siaoxiorliao",
-"description" : "记录学习过程",
+"description" : "学习笔记”,
+
 "plugins": [
 
-"anchor-navigation-ex"
+"-search",
+"search-pro", 
+
+"-sharing",
+
+"anchors",
+
+"simple-page-toc",
+
+"book-summary-scroll-position-saver",
+
+"anchor-navigation-ex",
+
+"sectionx",
+
+"toggle-chapters",
+
+"prism",
+"-highlight",
+
+"tbfed-pagefooter",
+
+"github”,
+
+"-search",
+"search-pro",
+
+"anchor-navigation-ex”,
+
+"todo”,
+
+"github-buttons"
 
 ],
   "pluginsConfig": {
+
+"search-pro": {
+"cutWordLib": "nodejieba",
+"defineWord" : ["Gitbook Use"]
+},
+
+"simple-page-toc": {
+"maxDepth": 3,
+"skipFirstH1": true
+},
+
+
 "anchor-navigation-ex": {
             "isRewritePageTitle": true,
             "isShowTocTitleIcon": true,
             "tocLevel1Icon": "fa fa-hand-o-right",
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
-        }
+},
+
+
+"sectionx": {
+          "tag": "b"
+},
+
+"prism": {
+            "css": [
+                "prism-themes/xonokai.css"
+            ]
+},
+
+"tbfed-pagefooter": {
+"copyright":"Copyright &copy siaoxiorliao 2017",
+"modify_label": "该文件修订时间：",
+"modify_format": "YYYY-MM-DD HH:mm:ss"
+}, 
+
+"github": {
+"url": "https://github.com/siaoxiorliao"
+},
+
+"github-buttons": {
+            "repo": "zhangjikai/gitbook-use",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+},
+
+"search-pro": {
+"cutWordLib": "nodejieba",
+"defineWord" : ["Gitbook Use"]
+},
+
+"anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+},
+
+
+
+
+
+
 
 
   }
