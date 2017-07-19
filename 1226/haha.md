@@ -23,7 +23,7 @@
 > 为什么toolb.frame = imageV.bounds而不是frame? :
 > 因为 imageV.frame可能会变,但是imageV.bound是不会变的(x,y永远是0,玻璃效果全覆盖,宽高也不变,这就保证了永远全覆盖在图片上了)
 
-##### 设置UIImageView的frame方式
+## 设置UIImageView的frame方式
 ```objectivec
 //1.
 imageView.frame = CGRectMake(100,100,267,400);
