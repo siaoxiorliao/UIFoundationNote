@@ -76,7 +76,7 @@
 
 "prism": {
 "css": [
-"prismjs/themes/prism-twilight.css"
+"prismjs/themes/prism.css"
 ]
 },
 
