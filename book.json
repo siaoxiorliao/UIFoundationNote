@@ -3,9 +3,11 @@
 "author" : "siaoxiorliao",
 "description" : "记录学习过程",
 "plugins": [
+
 "-search",
 "search-pro",
-"anchors",
+
+"anchors”,/*标题带有锚点*\
 "splitter",
 
 
