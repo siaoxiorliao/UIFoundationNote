@@ -13,7 +13,7 @@
 
 "plugins": [
 "splitter",
-
+"advanced-emoji",
 "-search",
 "search-pro", 
 
@@ -69,7 +69,12 @@
             "tocLevel3Icon": "fa fa-hand-o-right"
 },
 
-
+"fontsettings": {
+        "theme": "sepia",
+        "family": "serif",
+        "size":  1
+},
+    
 "sectionx": {
           "tag": "b"
 },
