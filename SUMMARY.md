@@ -1,7 +1,6 @@
 # Summary
 ## 介绍
-* [Hi](introduction.html)
-* [bookIntroduction](introduction/introduction.md)
+* [Hi](introduction.md)
 
 ## 路线
 * [1225 storyboard/控件连线/UIVIew](1225/1225.md)
