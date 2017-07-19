@@ -24,5 +24,125 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 **当你需要重新安装或者删除插件时,你要先把你生成的本地化的书删除,才能重新安装**
 
 **#一个超级巨大的坑: "这个符号一定要对....**
+### 我的book.json
 
+```javascript
+{
+"title" : "siaoxiorliao的学习笔记",
+"author" : "siaoxiorliao",
+"description" : "学习笔记",
+"output.name": "site",
+"gitbook": "3.2.2",
+"language": "zh-hans",
+"root": ".",
+"links": {
+"sidebar": {
+"Home": "https://www.gitbook.com/@siaoxiorliao1"
+}
+},
+
+"plugins": [
+"splitter",
+
+"-search",
+"search-pro", 
+
+"-sharing",
+
+"anchors",
+
+"simple-page-toc",
+
+
+"anchor-navigation-ex",
+
+"sectionx",
+
+"toggle-chapters",
+
+"prism",
+"-highlight",
+
+"tbfed-pagefooter",
+
+"github",
+
+"-search",
+"search-pro",
+
+"anchor-navigation-ex",
+
+"todo",
+
+"github-buttons"
+
+],
+"pluginsConfig": {
+
+"search-pro": {
+"cutWordLib": "nodejieba",
+"defineWord" : ["Gitbook Use"]
+},
+
+"simple-page-toc": {
+"maxDepth": 3,
+"skipFirstH1": true
+},
+
+
+"anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+},
+
+
+"sectionx": {
+          "tag": "b"
+},
+
+"prism": {
+            "css": [
+                "prism-themes/xonokai.css"
+            ]
+},
+
+"tbfed-pagefooter": {
+"copyright":"Copyright &copy siaoxiorliao 2017",
+"modify_label": "该文件修订时间：",
+"modify_format": "YYYY-MM-DD HH:mm:ss"
+}, 
+
+"github": {
+"url": "https://github.com/siaoxiorliao"
+},
+
+"github-buttons": {
+            "repo": "siaoxiorliao/uifoundationnote",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+},
+
+"search-pro": {
+"cutWordLib": "nodejieba",
+"defineWord" : ["Gitbook Use"]
+},
+
+"anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+}
+
+  }
+}
+```
 
