@@ -5,7 +5,6 @@
 "output.name": "site",
 "gitbook": "3.2.2",
 "language": "zh-hans",
-"root": ".",
 "links": {
 "sidebar": {
 "Home": "https://www.gitbook.com/@siaoxiorliao1"
@@ -46,6 +45,9 @@
 
 "todo",
 
+"prism",
+"-highlight",
+
 "github-buttons"
 
 ],
@@ -75,6 +77,11 @@
           "tag": "b"
 },
 
+"prism": {
+"css": [
+"xonokai.css"
+]
+},
 
 
 "tbfed-pagefooter": {
