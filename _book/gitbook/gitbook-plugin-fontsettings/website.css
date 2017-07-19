@@ -1,6 +1,9 @@
 /*
  * Theme 1
  */
+h1 , h2{
+    border-bottom: 1px solid #EFEAEA;
+}
 .color-theme-1 .dropdown-menu {
   background-color: #111111;
   border-color: #7e888b;
