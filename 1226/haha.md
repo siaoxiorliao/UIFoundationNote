@@ -1,4 +1,3 @@
-<!-- toc -->
 # UIImageView
 ## UIImageView常见属性
 * UIImage *image 显示的图片
