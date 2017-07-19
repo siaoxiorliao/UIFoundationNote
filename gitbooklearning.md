@@ -1,7 +1,7 @@
 # gitBook Editor 
+##### gitbook Editor的bug太多了,这里给一些建议
 
 Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要同步到gitHub就在gitHub新建依赖然后在gitBook上新建gitHub类型的书,gitHub上首页默认显示README.md内容.
-##### gitbook Editor的bug太多了,这里给一些建议
 
 1. 进入官网下载安装
 2. book分为本地和云端,云端即是你在GitBook上的书,本地就是在本地新建的
