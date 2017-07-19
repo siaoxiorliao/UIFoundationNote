@@ -1,22 +1,22 @@
 {
-"title" : “MyNote”,
-"author" : “siaoxiorliao”,
-"description" : “记录学习过程”,
+"title" : "MyNote",
+"author" : "siaoxiorliao",
+"description" : "记录学习过程",
 "plugins": [
-"-search”,
-"search-pro”,
-"anchors”,
-"splitter”,
-"book-summary-scroll-position-saver”,
-"-sharing”,
-"-highlight”,
-"toggle-chapters”,
-"tbfed-pagefooter”,
-"github”
+"-search",
+"search-pro",
+"anchors",
+"splitter",
+"book-summary-scroll-position-saver",
+"-sharing",
+"-highlight",
+"toggle-chapters",
+"tbfed-pagefooter",
+"github"
 ],
   "pluginsConfig": {
 "tbfed-pagefooter": {
-"copyright":"Copyright &copy siaoxiorliao 2017”,
+"copyright":"Copyright &copy siaoxiorliao 2017",
 "modify_label": "该文件修订时间：",
 "modify_format": "YYYY-MM-DD HH:mm:ss"
 },
