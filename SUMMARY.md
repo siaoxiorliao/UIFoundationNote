@@ -12,5 +12,5 @@
   
 ## 其他
 * [shortcutKey 快捷键集合](shortcutkey/shortcutkey.md)
-* [gitbookLearning](gitbooklearning.md)
+* [gitbookLearning](gitbookLearning/gitbooklearning.md)
 
