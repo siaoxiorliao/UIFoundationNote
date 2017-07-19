@@ -69,11 +69,7 @@
             "tocLevel3Icon": "fa fa-hand-o-right"
 },
 
-"fontsettings": {
-        "theme": "sepia",
-        "family": "serif",
-        "size":  1
-},
+
     
 "sectionx": {
           "tag": "b"
@@ -117,6 +113,11 @@
             "tocLevel3Icon": "fa fa-hand-o-right"
 }
 
+"fontsettings": {
+        "theme": "sepia",
+        "family": "serif",
+        "size":  1
+},
 
 
 
