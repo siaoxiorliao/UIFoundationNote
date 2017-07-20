@@ -7,13 +7,11 @@
 "language": "zh-hans",
 "links": {
 "sidebar": {
-"Home": "https://www.gitbook.com/@siaoxiorliao1"
+"Home": "https://www.gitbook.com/@siaoxiorliao"
 }
 },
 
 "plugins": [
-
-
 
 "splitter",
 "advanced-emoji",
@@ -63,17 +61,6 @@
 "maxDepth": 3,
 "skipFirstH1": true
 },
-
-
-"anchor-navigation-ex": {
-            "isRewritePageTitle": true,
-            "isShowTocTitleIcon": true,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
-},
-
-
     
 "sectionx": {
           "tag": "b"
@@ -84,7 +71,6 @@
 "prismjs/themes/prism.css"
 ]
 },
-
 
 "tbfed-pagefooter": {
 "copyright":"Copyright &copy siaoxiorliao 2017",
