@@ -28,7 +28,7 @@
 //1.
 imageView.frame = CGRectMake(100,100,267,400);
 //2.
-imageView.frame = (CGRect){{100,100},{267,400}};
+imageView.frame = {(CGRect){{100,100},{267,400}};
 //3.
 UIImage *image = [[UIImage alloc]init];
 imageView.frame = CGRenctMake(100,100,image.size.width,image.size.height);
