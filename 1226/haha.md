@@ -13,7 +13,7 @@
 
 ##### 毛玻璃效果
 
-```ruby
+```objectivec
     UIToolbar *toolb = [[UIToolbar alloc]init];
     toolb.frame = imageV.bounds;
     //toolb.frame = imageV.frame;
@@ -28,7 +28,7 @@
 
 ## 设置UIImageView的frame方式
 
-```ruby
+```objectivec
 //1.
 imageView.frame = CGRectMake(100,100,267,400);
 //2.
