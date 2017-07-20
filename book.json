@@ -47,7 +47,9 @@
 "prism",
 "-highlight",
 
-"github-buttons"
+"github-buttons",
+
+"fontsettings"
 
 ],
 "pluginsConfig": {
