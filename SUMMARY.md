@@ -12,7 +12,8 @@
   * [-资源存放选项说明和文件加载\(重要\)](1226/he-he.md)
   * [-拳皇图片动画实例/音效](1226/quanhuang.md)
   * [-开发常用的颜色](1226/yanse.md)
-* [1228 UIButton/](1228/uibutton.md)
+* [1228 UIButton](1228/uibutton.md)
+  * [综合练习](1228/shopcar.md)
 
 ## 其他
 
