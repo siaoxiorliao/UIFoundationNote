@@ -68,7 +68,7 @@
 
 "prism": {
 "css": [
-"prism-themes/themes/prism-okaidia.css"
+"themes/prism-okaidia.css"
 ]
 },
 
