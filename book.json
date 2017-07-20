@@ -115,6 +115,11 @@
             "tocLevel1Icon": "fa fa-hand-o-right",
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
+},
+"fontsettings": {
+        "theme": "white",
+        "family": "sans",
+        "size":  4
 }
 
 
