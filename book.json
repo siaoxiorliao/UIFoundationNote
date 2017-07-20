@@ -117,16 +117,9 @@
             "tocLevel3Icon": "fa fa-hand-o-right"
 },
 "fontsettings": {
-        "theme": "night",
+        "theme": "white",
         "family": "sans",
         "size":  2
 }
-
-
-
-
-
-
-
-  }
+}
 }
