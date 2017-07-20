@@ -114,9 +114,12 @@
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
 },
-"theme-default": {
-"showLevel": true
+ "fontsettings": {
+        "theme": "white,sepia,night",
+        "family": "serif,sans",
+        "font":"reduce,enlarge"
 }
+
 
 
 
