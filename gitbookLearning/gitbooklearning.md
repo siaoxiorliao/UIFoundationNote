@@ -39,14 +39,18 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 "output.name": "site",
 "gitbook": "3.2.2",
 "language": "zh-hans",
-"root": ".",
 "links": {
 "sidebar": {
-"Home": "https://www.gitbook.com/@siaoxiorliao1"
+"Home": "https://www.gitbook.com/@siaoxiorliao"
 }
 },
 
 "plugins": [
+
+"fontsettings",//主题可设置
+
+"advanced-emoji",//可加入emoji
+
 "splitter",//侧边栏可以收缩
 
 "-search",
@@ -106,14 +110,6 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 },
 
 
-"anchor-navigation-ex": {
-            "isRewritePageTitle": true,
-            "isShowTocTitleIcon": true,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
-},
-
 
 "sectionx": {
           "tag": "b"
@@ -122,14 +118,14 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 /*
 "prism": {
             "css": [
-                "prism-themes/xonokai.css"
+                "prism-themes/themes/prism-okaidia.css"
             ]
 },
 */
 
 "tbfed-pagefooter": {
 "copyright":"Copyright &copy siaoxiorliao 2017",
-"modify_label": "该文件修订时间：",
+"modify_label": "修改时间 :",
 "modify_format": "YYYY-MM-DD HH:mm:ss"
 }, 
 
@@ -140,24 +136,28 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 "github-buttons": {
             "repo": "siaoxiorliao/uifoundationnote",
             "types": [
-                "star",
-                "watch",
-                "fork"
+                "star"
             ],
             "size": "small"
 },
 
 "search-pro": {
-"cutWordLib": "nodejieba",
-"defineWord" : ["Gitbook Use"]
+    "cutWordLib": "nodejieba",
+    "defineWord" : ["Gitbook Use"]
 },
 
 "anchor-navigation-ex": {
-            "isRewritePageTitle": true,
+            "isRewritePageTitle": false,
             "isShowTocTitleIcon": true,
             "tocLevel1Icon": "fa fa-hand-o-right",
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
+}
+
+"fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
 }
 
   }
