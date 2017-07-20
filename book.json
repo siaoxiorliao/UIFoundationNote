@@ -114,10 +114,11 @@
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
 },
- "fontsettings": {
-        "theme": "night",
-        "family": "sans",
-        "font":"enlarge"
+
+"fontsettings": {
+"theme": ["white","sepia","night"],
+"family": ["serif","sans"],
+"font":["reduce","enlarge"]
 }
 
 
