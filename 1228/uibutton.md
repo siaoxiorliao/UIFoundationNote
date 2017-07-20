@@ -17,7 +17,7 @@
 
 ## 示例代码
 
-```objc
+```objectivec
 #import "ViewController.h"
 
 @interface ViewController ()
