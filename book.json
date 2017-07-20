@@ -13,7 +13,7 @@
 
 "plugins": [
 
-"disqus"
+"disqus",
 
 "splitter",
 "advanced-emoji",
