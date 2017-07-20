@@ -115,9 +115,9 @@
             "tocLevel3Icon": "fa fa-hand-o-right"
 },
  "fontsettings": {
-        "theme": "white,sepia,night",
-        "family": "serif,sans",
-        "font":"reduce,enlarge"
+        "theme": "night",
+        "family": "sans",
+        "font":"enlarge"
 }
 
 
