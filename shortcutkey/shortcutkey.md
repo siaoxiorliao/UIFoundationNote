@@ -1,9 +1,10 @@
 # Xcode快捷键
-
+control + i 格式化代码
 command + ← 左缩进  
 command + → 右缩进  
 command + ↑ 跳转上部  
 command + ↓ 跳转下部  
+control + l 链接到对应行数
 **control + command + ↑ 切换.h和.m文件  **  
 command + F 搜索内容  
 **command + shift +F  搜索包含内容的文件 **   
