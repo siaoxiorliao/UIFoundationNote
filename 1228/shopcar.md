@@ -13,7 +13,6 @@
 # 我的扩展
 
 * 一行放6个 间隔5.0
-* 根据选择的图片添加对应商品
 * 可增加更多的商品,直到超出手机范围
 * 全代码实现
 
@@ -21,8 +20,7 @@
 
 * 手机宽度是不变的,商品view是不变的,所以有限宽度只能装下一定个数的商品:
   先计算一行能添加商品的个数,当新的商品被添加,则判断是否超过手机宽度,超过则重置x,y增加一个高度和间隔.
-* 可以尝试通过瀑布流,自定商品view大小来添加...这个以后做吧
-
+* 用临时每行和每列的个数,和位置确定要增加和删除的位置
 #### 我的View设计代码
 
 ```objectivec
@@ -33,11 +31,11 @@
 @property (nonatomic,weak) UIView *shopCarView;
 @property (nonatomic,weak) UIButton *addBtn;
 @property (nonatomic,weak) UIButton *removeBtn;
-
+@property (nonatomic,weak) UILabel *lab;
 @property (nonatomic,assign) NSInteger goodsXCount;
 @property (nonatomic,assign) NSInteger goodsYCount;
 @property (nonatomic,assign) CGFloat tempX;
-
+@property (nonatomic,assign) CGFloat tempY;
 @end
 
 @implementation ViewController
@@ -48,56 +46,89 @@ CGFloat bounds = 5.0;
     [super viewDidLoad];
     _goodsXCount = 0;
     _goodsYCount = 0;
-    _tempX = 0;
+    _tempX = 60.0;
+    _tempY = 105.0;
     [self initShopCarView];
     [self initAddButton];
     [self initRemoveButton];
 }
 
 - (void)clickAddBtn:(UIButton *) sender {
-
+    self.lab.hidden = YES;
+    self.removeBtn.enabled = YES;
     CGFloat width = 50.0;
     CGFloat height = 100.0;
-    if (_goodsXCount < [self calculateCount]){
+    if (_tempX <= self.shopCarView.frame.size.width || _tempY <= self.shopCarView.frame.size.height){
         if (_tempX > self.shopCarView.frame.size.width){
+            _goodsXCount = 0;
             _goodsYCount += 1;
+            _tempX = 60.0;
+            _tempY += (height + bounds);
+        }
+        if (_tempY > self.shopCarView.frame.size.height){
+            self.addBtn.enabled = NO;
+            [self initLabWith:@"购物车都满了,你这么富的吗,dailao"];
+            return;
         }
         [self addView:width andHeight:height];
-            _tempX += width + bounds;
-            _goodsXCount += 1;
-//        NSLog(@"Xcount : %d",_goodsXCount);
-
-    }else{
-        _goodsXCount = 0;
-        _goodsYCount += 1;
-        _tempX = 0;
-        [self addView:width andHeight:height];
-        _tempX += width + bounds;
+        _tempX += (width + bounds);
         _goodsXCount += 1;
-//        NSLog(@"Xcount: %d ,Ycount : %d",_goodsYCount,_goodsYCount);
     }
 }
 
-- (void)addView:(CGFloat) width andHeight:(CGFloat) height{
+- (void)clickRemoveBtn:(UIButton *) sender {
+    [self.lab removeFromSuperview];
+    UIView *lastView = [self.shopCarView.subviews lastObject];
+    CGFloat x = lastView.frame.origin.x;
+    CGFloat y = lastView.frame.origin.y;
+    [self resetXY:x withY:y];
+    [lastView removeFromSuperview];
+}
 
+-(void)resetXY: (CGFloat) x withY: (CGFloat) y {
+    self.addBtn.enabled = YES;
+    self.tempX = x + 55;
+    self.tempY = y + 100;
+    self.goodsXCount = ((x-5)/55);
+    self.goodsYCount = (y-5)/105;
+    if (_goodsXCount == 0 && _goodsYCount == 0){
+        self.removeBtn.enabled = NO;
+        [self initLabWith:@"这么穷,连购物车都要整整吗? qixi"];
+    }
+}
+
+- (void)apperaRemind{
+    if (self.shopCarView.subviews.count == 0){
+        self.lab.hidden = NO;
+    }else{
+        self.lab.hidden = YES;
+    }
+}
+
+- (void)initLabWith: (NSString *)text{
+    UILabel *lab = [[UILabel alloc]init];
+    lab.frame = CGRectMake(self.shopCarView.frame.size.width * 0.1,self.shopCarView.frame.size.height * 0.45, self.shopCarView.frame.size.width * 0.8, self.shopCarView.frame.size.height * 0.1);
+    lab.text = text;
+    lab.backgroundColor =[UIColor whiteColor];
+    lab.textColor = [UIColor blackColor];
+    lab.textAlignment = NSTextAlignmentCenter;
+    self.lab = lab;
+    [self.shopCarView addSubview:self.lab];
+}
+
+- (void)addView:(CGFloat) width andHeight:(CGFloat) height{
+    
     UIView *goodsView = [[UIView alloc]initWithFrame:CGRectMake(bounds + _goodsXCount * (width + bounds),
                                                                 bounds + _goodsYCount * (height + bounds),
                                                                 50, 100)];
     goodsView.backgroundColor = [UIColor greenColor];
     [self.shopCarView addSubview:goodsView];
-}
-
-- (void)clickRemoveBtn:(UIButton *) sender {
-    NSLog(@"减少一个商品");
-}
-
-- (NSInteger)calculateCount {
-    return ((NSInteger)self.shopCarView.frame.size.width - bounds)/(50 + bounds);
+    
 }
 
 - (void)initAddButton {
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    addBtn.frame =CGRectMake(20, self.shopCarView.frame.origin.y - 60, 50, 50);
+    addBtn.frame =CGRectMake(self.shopCarView.frame.origin.x, self.shopCarView.frame.origin.y - 60, 50, 50);
     [addBtn setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
     [addBtn setImage:[UIImage imageNamed:@"add_disabled"] forState:UIControlStateDisabled];
     [addBtn setImage:[UIImage imageNamed:@"add_highlighted"] forState:UIControlStateHighlighted];
@@ -119,13 +150,18 @@ CGFloat bounds = 5.0;
 }
 
 - (void)initShopCarView {
-    UIView *shopCarView = [[UIView alloc]initWithFrame:CGRectMake(20, 300, self.view.frame.size.width - 40, 500)];
+    UIView *shopCarView = [[UIView alloc]initWithFrame:CGRectMake(40, 300, self.view.frame.size.width - 79, 425)];
     shopCarView.backgroundColor = [UIColor orangeColor];
     self.shopCarView = shopCarView;
     [self.view addSubview:self.shopCarView];
 }
 
 @end
+
+
+
+
+
 ```
 
 
