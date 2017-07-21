@@ -10,6 +10,110 @@
 
 * 根据添加的商品个数求3的余来换行,求得的余即是商品对应的行和列,再根据行列得到商品的位置
 
+```objectivec
+
+#import "ViewController.h"
+
+@interface ViewController ()
+
+// 购物车
+@property (weak, nonatomic) IBOutlet UIView *shopCarView;
+// 添加按钮0
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+// 删除按钮
+@property (weak, nonatomic) IBOutlet UIButton *removeButton;
+// 全局的下标
+//@property (nonatomic, assign) NSInteger index;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // 给下标赋值
+//    self.index = 0;
+    
+//    // 裁剪多余部分(不可取)
+//    self.shopCarView.clipsToBounds = YES;
+}
+
+/**
+ *  添加到购物车
+ *
+ *  @param button 按钮
+ */
+- (IBAction)add:(UIButton *)button {
+/***********************1.定义一些常量*****************************/
+    // 1.总列数
+    NSInteger allCols = 3;
+    // 2.商品的宽度 和 高度
+    CGFloat width = 80;
+    CGFloat height = 100;
+    // 3.求出水平间距 和 垂直间距
+    CGFloat hMargin = (self.shopCarView.frame.size.width - allCols * width) / (allCols -1);
+    CGFloat vMargin = (self.shopCarView.frame.size.height - 2 * height) / 1;
+    // 4. 设置索引
+    NSInteger index = self.shopCarView.subviews.count;
+    // 5.求出x值
+    CGFloat x = (hMargin + width) * (index % allCols);
+    CGFloat y = (vMargin + height) * (index / allCols);
+    
+/***********************2.创建一个商品*****************************/
+  // 1.创建商品的view
+    UIView *shopView = [[UIView alloc] init];
+  // 2.设置frame
+    shopView.frame = CGRectMake(x, y, width, height);
+  // 3.设置背景颜色
+    shopView.backgroundColor = [UIColor greenColor];
+  // 4.添加到购物车
+    [self.shopCarView addSubview:shopView];
+    
+/***********************3.设置按钮的状态*****************************/
+//    if (index == 5) {
+//        button.enabled = NO;
+//    }
+    button.enabled = (index != 5);
+    
+    // 5.设置删除按钮的状态
+    self.removeButton.enabled = YES;
+    
+    // 让下标+1
+//    self.index += 1;
+}
+
+/**
+ *  从购物车中删除
+ *
+ *  @param button 按钮
+ */
+- (IBAction)remove:(UIButton *)button {
+    // 1. 删除最后一个商品
+    UIView *lastShopView = [self.shopCarView.subviews lastObject];
+    [lastShopView removeFromSuperview];
+    
+    // 2.设置索引值 -1
+//    self.index -= 1;
+    
+    // 3. 设置添加按钮的状态
+    self.addButton.enabled = YES;
+    
+    // 4. 设置删除按钮的状态
+    /*
+    if (self.shopCarView.subviews.count == 0) {
+        self.removeButton.enabled = NO;
+    }
+     */
+    self.removeButton.enabled = (self.shopCarView.subviews.count != 0);
+}
+
+@end
+
+
+
+
+
+```
 # 我的扩展
 
 * 一行放6个 间隔5.0
@@ -158,11 +262,10 @@ CGFloat bounds = 5.0;
 
 @end
 
-
-
-
-
 ```
+### 对比
+
+* 虽然我的代码稍微多一点,但是我做了间隔,是全代码实现,并且扩展性很好,改变购物车大小或商品view大小也很容易适配,但是阅读性不怎么好,很笨的方法
 
 
 
