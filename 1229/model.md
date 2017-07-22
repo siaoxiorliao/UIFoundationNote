@@ -80,7 +80,7 @@ XMGShop *shop = [XMGShop shopWithDict:dict];
 ```
 
 ### 类前缀
-
+区分框架等...
 NS即是Foundation框架里的
 UI即是UIKit框架里的
 
