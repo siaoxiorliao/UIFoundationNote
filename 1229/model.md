@@ -22,13 +22,18 @@ NSString *name = dict[@"name"];
  ```
  
 ## 字典转模型 原理
-1. 创建模型类
+
+1.创建模型类
 ![](/1229/images/WX20170722-145243.png)
-2. 字典转模型
+
+2.字典转模型,变成模型数组
 
 导入头文件 #import "goodsModel.h"
+
 ![](/1229/images/WX20170722-145307.png)
-3. 使用模型
+
+3.使用模型
+
 ![](/1229/images/WX20170722-145320.png)
 
 ## 快速转模型(提供快速构造方法)
@@ -53,11 +58,9 @@ XMGShop *shop = [XMGShop shopWithIcon:dict[@"icon"] name:dict[@"name"]];
 shop.name = dict[@"name"];
 shop.icon = dict[@"icon"];
 ```
+* 应该这样 :
 
-* 最终应该这样 :
-
-``` objectivec
-
+```objectivec
 - (instancetype)initWithDict:(NSDictionary *)dict{
     if (self = [super init]) {
         self.icon = dict[@"icon"];
@@ -65,14 +68,19 @@ shop.icon = dict[@"icon"];
     }
     return self;
 }
+
 + (instancetype)shopWithDict:(NSDictionary *)dict{
     return [[self alloc] initWithDict:dict];
 }
-
 ```
 
+* 保证了封装性
+```objectivec
+XMGShop *shop = [XMGShop shopWithDict:dict];
+```
 
-## 类前缀
+### 类前缀
+
 NS即是Foundation框架里的
 UI即是UIKit框架里的
 
