@@ -17,6 +17,7 @@
 * [1229/设置数据方式/懒加载原理](1229/1229.md)
   * [本地文件plist/plist读取](1229/plist.md)
   * [模型model/字典转模型/类前缀](1229/model.md)
+  * [自定义控件](1229/selfdefinedcontroller.md)
 
 ## 其他
 
