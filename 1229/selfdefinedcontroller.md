@@ -81,7 +81,7 @@
 ![](/1229/images/WX20170722-180752.png)
 
 ### 扩展:再次封装 1229-10-09
-* 提供传入模型的快速构造方法,在方法里面初始化控件和设置数据
+* 提供传入模型的快速构造方法(重写模型的setter方法),在方法里面初始化控件和设置数据
 
 ```objectivec
 #import "XMGShopView.h"
@@ -106,6 +106,7 @@
         // 注意:先创建后赋值
         [self setUp];
         self.shop = shop;//同时调用setShop
+        //[self setShop:shop];也可以
     }
     return self;
 }
@@ -142,6 +143,20 @@
 
 @end
 ```
+
+* 使用
+
+```objectivec
+ZWGoodsView *goodsView = [[ZWGoodsView alloc]initWithModel:self.dataArr[index]];
+goodsView.frame = CGRectMake(x, y, width, height);
+[self.shopCarView addSubview:goodsView];
+```
+
+
+### 总结:
+创建自定义的类,一般要提供init,initWith对象方法,[类 类方法]
+来提供初始化的接口...特别是模型,以后从服务器取数据多依靠模型来设置数据....
+
 
 
 
