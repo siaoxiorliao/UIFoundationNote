@@ -14,9 +14,8 @@
   * [-开发常用的颜色](1226/yanse.md)
 * [1228 UIButton](1228/uibutton.md)
   * [综合练习/我的扩展](1228/shopcar.md)
-* [本地文件plist读取](1229/1229/plist.md)
 * [1229/数据加载方式/懒加载原理](1229/1229.md)
-* [plistwrite](1225/plistwrite.md)
+  * [本地文件plist/plist读取](1229/plist.md)
 
 ## 其他
 
