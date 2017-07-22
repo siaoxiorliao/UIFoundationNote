@@ -21,3 +21,12 @@
 
 ### 读取注意
 * 放入项目,记得加入资源包中
+
+```objectivec
+
+NSArray *persons = [NSArray arrayWithContentsOfFile:@"/Users/xiaomage/Desktop/persons.plist"];
+NSLog{@"%@",persons};
+
+```
+
+
