@@ -46,7 +46,7 @@
     return self;
 }
 - (void)layoutSubviews{
-    [super layoutSubviews];
+    [super layoutSubviews];//一定要先调用父类的布局方法
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;
     self.iconView.frame = CGRectMake(0, 0, width, height);
@@ -61,6 +61,10 @@
 ## 数据设置 思路(重要)
 ### 方式一
 * 上面**方式一**在这里就有弊端,外面可以随时访问(写)子控件(属性),封装性不好,**1229-09-01(重要,封装性讲述)**
+
+```objectivec
+goodsView.titleLabel = nil;
+```
 * 属性如果改成只读的呢?
 > 但是属性依然能拿到**(间接访问)**
 ![](/1229/images/WX20170722-174848.png)
@@ -115,6 +119,13 @@
     return [[self alloc] initWithShop:shop];
 }
 
+-
+(void)setShop:(XMGShop *)shop{
+_shop = shop;//不能用self.shop,会死循环
+self.iconView.image = [UIImage imageNamed:shop.icon];
+self.titleLabel.text = shop.name;
+}
+
 - (void)setUp{
     UIImageView *iconView = [[UIImageView alloc] init];
     iconView.backgroundColor = [UIColor blueColor];
@@ -133,12 +144,6 @@
     CGFloat height = self.frame.size.height;
      self.iconView.frame = CGRectMake(0, 0, width, width);
      self.titleLabel.frame = CGRectMake(0, width, width, height - width);
-}
-
-- (void)setShop:(XMGShop *)shop{
-    _shop = shop;//不能用self.shop,会死循环
-    self.iconView.image = [UIImage imageNamed:shop.icon];
-    self.titleLabel.text = shop.name;
 }
 
 @end
