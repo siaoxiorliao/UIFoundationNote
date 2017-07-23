@@ -1,4 +1,13 @@
-# 自定义控件及封装/layoutSubviews/数据设置思路(重要)
+# View封装思想/自定义控件/layoutSubviews/数据设置思路(重要)/init和initWithFrame
+---
+
+# view封装思想和步骤
+* 如果一个view内部的子控件比较多，一般会考虑自定义一个view，把它内部子控件的创建屏蔽起来，不让外界关心
+* 外界可以传入对应的模型数据给view，view拿到模型数据后给内部的子控件设置对应的数据
+## 封装控件的基本步骤
+1. 在initWithFrame:方法中添加子控件，提供便利构造方法
+2. 在layoutSubviews方法中设置子控件的frame（一定要调用super的layoutSubviews）
+3. 增加模型属性，在模型属性set方法中设置数据到子控件上
 
 ## 自定义控件
 * 在其他地方想要用到,可以封装一个自定义的控件类,以后要用的时候直接调用控件类创建就行了
@@ -156,8 +165,29 @@ ZWGoodsView *goodsView = [[ZWGoodsView alloc]initWithModel:self.dataArr[index]];
 goodsView.frame = CGRectMake(x, y, width, height);
 [self.shopCarView addSubview:goodsView];
 ```
+---
+### init和initWithFrame补充
+* 创建了快速构造方法后,还有initWithFrame方法没有重写
+* 创建对象使用alloc init方法和initWithFrame方法:都会调用initWithFrame方法,所以不用写init方法,写initWithFrame方法即可
 
+```objectivec
+//- (instancetype)init{
+//    NSLog(@"aaa");
+//    if (self = [super init]) {
+//        [self setUp];
+//    }
+//    return self;
+//}
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    NSLog(@"bbb");
+    if (self =[super initWithFrame:frame]) {
+        [self setUp];
+    }
+    return self;
+}
+```
+---
 ### 总结:
 创建自定义的类,一般要提供init,initWith对象方法,[类 类方法]
 来提供初始化的接口...特别是模型,以后从服务器取数据多依靠模型来设置数据....

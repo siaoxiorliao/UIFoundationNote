@@ -1,5 +1,5 @@
-# UIImageView
-
+# -UIImageView/frame/毛玻璃
+---
 ## UIImageView常见属性
 
 * UIImage \*image 显示的图片
