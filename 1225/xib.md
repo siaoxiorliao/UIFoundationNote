@@ -50,7 +50,7 @@
     return [[[NSBundle mainBundle] loadNibNamed:@"CarView" owner:nil options:nil] firstObject];
 }
 ```
-### xib使用注意
+### xib使用注意 1230-05
 * 想用初始化方法init 和 initWithFrame通过**代码**来添加子控件是不可行的(不会调用它们).
 * 但是可以使用initWithCoder(Coder代码)和awakeFromNib(唤醒),来添加子控件
 
@@ -91,6 +91,33 @@
     self.toolBar = toolBar;
 }
 ```
+
+## xib的加载原理
+* 将xib文件的视图转化为代码
+
+```objectivec
+#pragma mark - xib的加载原理
+- (UIView *)loadFormNib{
+    XMGShopView *shopView = [[XMGShopView alloc] initWithCoder:nil];
+    shopView.frame = CGRectMake(0, 0, 80, 100);
+    
+    UIImageView *iconView = [[UIImageView alloc] initWithCoder:nil];
+    iconView.backgroundColor = [UIColor greenColor];
+    iconView.frame = CGRectMake(0, 0, 80, 80);
+    iconView.tag = 100;
+    [shopView addSubview:iconView];
+    self.iconView = iconView;
+    
+    UILabel *label = [[UILabel alloc] initWithCoder:nil];
+    label.backgroundColor = [UIColor orangeColor];
+    label.tag = 200;
+    [shopView addSubview:label];
+    self.titleLabel = label;
+    return shopView;
+
+```
+
+
 
 
 

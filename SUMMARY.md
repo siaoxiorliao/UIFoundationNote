@@ -18,7 +18,8 @@
   * [本地文件plist/plist读取](1229/plist.md)
   * [\*模型model/字典转模型/类前缀](1229/model.md)
   * [\*View封装思想/自定义控件/layoutSubviews/数据设置思路\(重要\)/init和initWithFrame](1229/selfdefinedcontroller.md)
-* [1230/MVC思想/xib](1225/xib.md)
+* [\*1230/MVC思想/xib原理和使用](1225/xib.md)
+  * [animation动画](1225/xib/shadeanimation.md)
 
 ## 其他
 
