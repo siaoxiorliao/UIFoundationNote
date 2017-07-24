@@ -1,3 +1,4 @@
+
 #自定义UIButton/图片拉伸
 ## 调整UIBuuton内部子控件
 
@@ -46,6 +47,68 @@
 
 ### 解决方案
 * 拉伸不会失真的地方,保护会失真的地方
+
+```objectivec
+    //CapInsets:保护的地方
+    // 一般图片保护:1.保护上边的一半,2.保护下边的一半-1 3.保护左边的一半 4.保护右边的一半-1
+    
+    //方式一
+
+//    UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height * 0.5,
+//                                                                                  image.size.width * 0.5,
+//                                                                                  image.size.height * 0.5 - 1,
+//                                                                                  image.size.width * 0.5 -1
+//                                                                                  )];
+    
+//    UIImageResizingModeTile //平铺(填充,默认)
+//    UIImageResizingModeStretch //拉伸(伸缩)
+//    UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height * 0.5,
+//                                                                                 image.size.width * 0.5,
+//                                                                                 image.size.height * 0.5 - 1,
+//                                                                                 image.size.width * 0.5 -1
+//                                                                                 )
+//                                                   resizingMode:UIImageResizingModeTile];
+    //方式二
+    //已经自动-1
+    UIImage *resizableImage = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.width * 0.5];
+    
+    [self.button setBackgroundImage:resizableImage forState:UIControlStateNormal];
+```
+
+### 可以为保护图片创建分类Category
+
+* 有时需要经常拉伸图片
+* 可以创建分类
+
+```objectivec
+
+#import <UIKit/UIKit.h>
+
+@interface UIImage (XMGExtention)
++ (instancetype)resizableImageWithLocalImageName: (NSString *)localImageName;
+@end
+```
+---
+```objectivec
+#import "UIImage+XMGExtention.h"
+
+@implementation UIImage (XMGExtention)
++ (instancetype)resizableImageWithLocalImageName:(NSString *)localImageName{
+    UIImage *image = [UIImage imageNamed:localImageName];
+    CGFloat imageWidth = image.size.width;
+    CGFloat imageHeiht = image.size.height;
+    return [image stretchableImageWithLeftCapWidth:imageWidth * 0.5 topCapHeight:imageHeiht * 0.5 ];
+}
+@end
+```
+
+* 也可以在assets中设置
+
+![](/1230/images/WX20170724-121729.png)
+
+
+
+
 
 
 
