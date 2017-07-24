@@ -36,7 +36,7 @@
 * UIEdgeInsets insets = {top, left, bottom, right};
 
 ```objectivec
-//    self.button.contentEdgeInsets = UIEdgeInsetsMake(-20, -0, 0, 0);
+//self.button.contentEdgeInsets = UIEdgeInsetsMake(-20, -0, 0, 0);
     self.button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     self.button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -10);
 ```
@@ -54,24 +54,23 @@
     
     //方式一
 
-//    UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height * 0.5,
-//                                                                                  image.size.width * 0.5,
-//                                                                                  image.size.height * 0.5 - 1,
-//                                                                                  image.size.width * 0.5 -1
-//                                                                                  )];
+    //    UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height * 0.5,
+    //                                                                                      image.size.width * 0.5,
+    //                                                                                  image.size.height * 0.5 - 1,
+    //                                                                                  image.size.width * 0.5 -1
+    //                                                                                  )];
     
-//    UIImageResizingModeTile //平铺(填充,默认)
-//    UIImageResizingModeStretch //拉伸(伸缩)
-//    UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height * 0.5,
-//                                                                                 image.size.width * 0.5,
-//                                                                                 image.size.height * 0.5 - 1,
-//                                                                                 image.size.width * 0.5 -1
-//                                                                                 )
-//                                                   resizingMode:UIImageResizingModeTile];
+    //    UIImageResizingModeTile //平铺(填充,默认)
+    //    UIImageResizingModeStretch //拉伸(伸缩)
+    //    UIImage *resizableImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height * 0.5,
+    //                                                                                 image.size.width * 0.5,
+    //                                                                                 image.size.height * 0.5 - 1,
+    //                                                                                         image.size.width * 0.5 -1
+    //                                                                                 )
+    //                                                   resizingMode:UIImageResizingModeTile];
     //方式二
     //已经自动-1
     UIImage *resizableImage = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.width * 0.5];
-    
     [self.button setBackgroundImage:resizableImage forState:UIControlStateNormal];
 ```
 
@@ -82,24 +81,24 @@
 
 ```objectivec
 
-#import <UIKit/UIKit.h>
+    #import <UIKit/UIKit.h>
 
-@interface UIImage (XMGExtention)
-+ (instancetype)resizableImageWithLocalImageName: (NSString *)localImageName;
-@end
+    @interface UIImage (XMGExtention)
+    + (instancetype)resizableImageWithLocalImageName: (NSString *)localImageName;
+    @end
 ```
 ---
 ```objectivec
-#import "UIImage+XMGExtention.h"
+    #import "UIImage+XMGExtention.h"
 
-@implementation UIImage (XMGExtention)
-+ (instancetype)resizableImageWithLocalImageName:(NSString *)localImageName{
+    @implementation UIImage (XMGExtention)
+    + (instancetype)resizableImageWithLocalImageName:(NSString *)localImageName{
     UIImage *image = [UIImage imageNamed:localImageName];
     CGFloat imageWidth = image.size.width;
     CGFloat imageHeiht = image.size.height;
     return [image stretchableImageWithLeftCapWidth:imageWidth * 0.5 topCapHeight:imageHeiht * 0.5 ];
-}
-@end
+    }
+    @end
 ```
 
 * 也可以在assets中设置

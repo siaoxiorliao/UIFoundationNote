@@ -56,18 +56,18 @@
 
 ### 缩放
 ```objectivec
- [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+     [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
         CGRect frame = self.animationView.frame;
         CGRect tempFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width * 0.9, frame.size.height * 0.9);
         self.animationView.frame = tempFrame;
-    } completion:^(BOOL finished) {
+     } completion:^(BOOL finished) {
         NSLog(@"动画完成");
     }];
 ```
 
 ### 透明度
 ```objectivec
-[UIView animateWithDuration:1.0 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:1.0 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.animationView.alpha -= 0.9;
     } completion:^(BOOL finished) {
     //嵌套
