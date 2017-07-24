@@ -11,12 +11,12 @@
 ### 平移
 ```objectivec
 // 方式一 首尾式
-[UIView beginAnimations:nil context:nil];
-[UIView setAnimationDuration:1.0];
-CGRect frame = self.animationView.frame;
-frame.origin.y -= 50;
-self.animationView.frame = frame;
-[UIView commitAnimations];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1.0];
+    CGRect frame = self.animationView.frame;
+    frame.origin.y -= 50;
+    self.animationView.frame = frame;
+    [UIView commitAnimations];
 ```
 ```objectivec
 // 方式二 block式(常用)
@@ -67,7 +67,7 @@ self.animationView.frame = frame;
 
 ### 透明度
 ```objectivec
- [UIView animateWithDuration:1.0 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+[UIView animateWithDuration:1.0 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.animationView.alpha -= 0.9;
     } completion:^(BOOL finished) {
     //嵌套
@@ -77,7 +77,7 @@ self.animationView.frame = frame;
     }];
 ```
 
-## 核心动画
+## 核心动画 CoreAnimation
 nothing for the moment
 
 hud指示器
