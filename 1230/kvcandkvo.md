@@ -104,6 +104,7 @@ XMGPerson *person = [[XMGPerson alloc] init];
     NSLog(@"%@", dict);
 ```
 6.取出数组中所有模型的某个属性值
+
 ```objectivec
     XMGPerson *person1 = [[XMGPerson alloc] init];
     person1.name = @"zhangsan";
@@ -131,5 +132,63 @@ XMGPerson *person = [[XMGPerson alloc] init];
 ## KVO - Key Value Observing 键值观察
 
 * 是一种回调机制，在某个对象注册监听者后，当被监听的对象发生改变时，对象会发送一个通知给监听者，以便监听者执行回调操作。
+
+```objectivec
+
+#import "ViewController.h"
+#import "XMGPerson.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    XMGPerson *person = [[XMGPerson alloc] init];
+    person.name = @"zs";
+    person.age = 5;
+    [person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [person addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    person.name = @"ls";
+    person.age = 10;
+    person.name = @"ww";
+     person.age = 20;
+    // 移除监听
+    [person removeObserver:self forKeyPath:@"name"];
+     [person removeObserver:self forKeyPath:@"age"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+    NSLog(@"%@------%@------%@", keyPath, object, change);
+    /*
+    name------<XMGPerson: 0x60000002ff80>------{
+    kind = 1;
+    new = ls;
+    old = zs;
+}
+    age------<XMGPerson: 0x60000002ff80>------{
+    kind = 1;
+    new = 10;
+    old = 5;
+}
+    name------<XMGPerson: 0x60000002ff80>------{
+    kind = 1;
+    new = ww;
+    old = ls;
+}
+    age------<XMGPerson: 0x60000002ff80>------{
+    kind = 1;
+    new = 20;
+    old = 10;
+}
+    */
+    
+}
+@end
+
+```
+
 
 ## KVO - Key Value Observing 键值观察
