@@ -1,3 +1,4 @@
+#自定义UIButton/图片拉伸
 ## 调整UIBuuton内部子控件
 
 * 默认,按钮内部有一个imageView(左边)和titleLabel(右边),在button外面修改按钮子控件的尺寸,按钮内部会覆盖掉
@@ -29,7 +30,7 @@
     self.imageView.frame = CGRectMake(100,0,70,70);
 }
 ``` 
-
+---
 ## 调整子控件内边距
 * UIEdgeInsets insets = {top, left, bottom, right};
 
@@ -38,4 +39,14 @@
     self.button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     self.button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -10);
 ```
+---
+## 图片拉伸
+
+* 图片正常拉伸会失真.
+
+### 解决方案
+* 拉伸不会失真的地方,保护会失真的地方
+
+
+
 

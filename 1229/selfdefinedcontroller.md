@@ -167,7 +167,9 @@ goodsView.frame = CGRectMake(x, y, width, height);
 ```
 ---
 ### init和initWithFrame补充
+
 * 创建了快速构造方法后,还有initWithFrame方法没有重写
+* init和initWithFrame方法功能是用来初始化子控件的
 * 创建对象使用alloc init方法和initWithFrame方法:都会调用initWithFrame方法,所以不用写init方法,写initWithFrame方法即可
 
 ```objectivec
