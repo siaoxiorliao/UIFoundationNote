@@ -149,8 +149,8 @@ XMGPerson *person = [[XMGPerson alloc] init];
     XMGPerson *person = [[XMGPerson alloc] init];
     person.name = @"zs";
     person.age = 5;
-    [person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [person addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:@"你好啊"];
+    [person addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:@"你好"];
     person.name = @"ls";
     person.age = 10;
     person.name = @"ww";
@@ -160,29 +160,32 @@ XMGPerson *person = [[XMGPerson alloc] init];
      [person removeObserver:self forKeyPath:@"age"];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+- (void)observeValueForKeyPath:(NSString *)keyPath 
+ofObject:(id)object
+change:(NSDictionary<NSString *,id> *)change
+context:(void *)context{
     NSLog(@"%@------%@------%@", keyPath, object, change);
     /*
     name------<XMGPerson: 0x60000002ff80>------{
     kind = 1;
     new = ls;
     old = zs;
-}
+}-----你好啊
     age------<XMGPerson: 0x60000002ff80>------{
     kind = 1;
     new = 10;
     old = 5;
-}
+}-----你好
     name------<XMGPerson: 0x60000002ff80>------{
     kind = 1;
     new = ww;
     old = ls;
-}
+}-----你好啊
     age------<XMGPerson: 0x60000002ff80>------{
     kind = 1;
     new = 20;
     old = 10;
-}
+}-----你好
     */
     
 }
