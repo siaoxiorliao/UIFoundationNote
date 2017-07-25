@@ -51,6 +51,7 @@
     [btn setBackgroundImage:[UIImage imageNamed:@"buttongreen"] forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:@"buttongreen_highlighted"] forState:UIControlStateHighlighted];
     [self.view addSubview:btn];
+    // **按钮监听**
     SEL sel = @selector(clickBtn:);
     [btn addTarget:self action:sel forControlEvents:UIControlEventTouchUpInside];
 
