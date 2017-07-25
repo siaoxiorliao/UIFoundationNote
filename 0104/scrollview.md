@@ -78,7 +78,7 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
 
 ## 超级重要,用strong和weak的区别
 ![](/0104/images/WX20170725-201718.png)
-![](/0104/images/WechatIMG344.jpeg)
+![](/0104/images/WechatIMG344.png)
 
 ---
 ---
