@@ -221,34 +221,34 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
 ### NSTimer定时器,自动换页
 
 ```objectivec
-    @property(weak,nonatomic)NSTimer *timer; //控制器一直在使用该定时器,不必strong
+@property(weak,nonatomic)NSTimer *timer; //控制器一直在使用该定时器,不必strong
     
-    [self startTimer];
+[self startTimer];//开启定时器
     
-    #pragma mark - 定时器
-    -(void)startTimer{
+#pragma mark - 定时器
+-(void)startTimer{
     //自动返回一个自动执行的定时器
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
      [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];//加入主线程
-    }
-    -(void)stopTimer{
+}
+-(void)stopTimer{
     [self.timer invalidate];
-    }
-    -(void)nextPage{
+}
+-(void)nextPage{
     NSInteger page = self.pageControl.currentPage + 1;
     if (page == 5){
         page = 0;
     }
-    [self.scrollView setContentOffset:CGPointMake(page * self.scrollView.frame.size.width, 0) animated:YES];
-    }
+    [self.scrollView setContentOffset:CGPointMake(page *         self.scrollView.frame.size.width, 0) animated:YES];
+}
 
-    - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self stopTimer];
-    }
+}
 
-    - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     [self startTimer];
-    }
+}
 
 ```
 
