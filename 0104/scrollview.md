@@ -77,7 +77,8 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
 
 > * 注意点 scrollView的delegate属性是weak,若创建代理对象后没有强指针引用该对象,即会被销毁,这时需要强指针引用它才可以(创建一个strong属性).**0104-08-06:30**(weak)
 >> 苹果为什么设置代理属性为weak? **0104-08-13**
->> ![](/0104/images/WX20170725-160205.png)
+>> ![](/0104/images/WX20170726-100517.png)
+
 >> 扩展:为什么模型属性用strong?连线属性用weak?
 
 ## 超级重要,用strong和weak的区别
