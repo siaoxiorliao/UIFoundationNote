@@ -37,7 +37,7 @@
     - (void)printAge{
     NSLog(@"age:%d", _age);
     }
-@end
+    @end
 ```
 修改:
 ```objectivec
@@ -190,8 +190,6 @@ context:(void *)context{
     
 }
 @end
-
 ```
-
 
 ## KVO - Key Value Observing 键值观察
