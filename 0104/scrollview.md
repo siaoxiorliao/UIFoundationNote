@@ -1,3 +1,5 @@
+# UIScrollView/代理和代理方法/scrollView内容缩放/scrollView开启分页/NSTimer定时器
+
 # UIScrollView 滚动视图
 * 继承自UIView
 
