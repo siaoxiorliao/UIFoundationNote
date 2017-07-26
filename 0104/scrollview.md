@@ -1,7 +1,7 @@
 # UIScrollView 滚动视图
 * 继承自UIView
 
-##scrollView常见属性
+## scrollView常见属性
 contentSize 内容大小
 **contenOffset** 内容的偏移量(滚动的位置)
 > * 如果设置负的 触摸一下即回到(0,0),可以用来做好的效果
@@ -110,6 +110,22 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
        NSLog(@"scrollView减速完毕会调用,停止滚动");
 }
 // 等等
+```
+
+## scrollView实现内容缩放
+
+```objectivec
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    //设置属性
+//    self.scrollView.maximumZoomScale = 2.0;
+//    self.scrollView.minimumZoomScale = 0.5;
+//    return [[scrollView subviews] lastObject];
+//    return [[scrollView subviews] firstObject];
+    //过程 : scrollView询问代理需要缩放的控件(询问),代理发消息(执行方法)通知scrollView要缩放的控件;
+    return self.imageView;
+}
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
+}
 ```
 
 

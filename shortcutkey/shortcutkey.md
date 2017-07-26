@@ -34,7 +34,8 @@ command + shift + 0 打开文档参考
 command + s 截图  
 command + 12345 切换模拟器窗口大小  
 command + L 锁屏  
-option 开启双手势  
+**option 开启双手势  **
+**option + shift 移动手势**
 command + ←  切换模拟器方向  
 command + control + Z 模拟器抖动
 
