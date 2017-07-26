@@ -262,8 +262,16 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
 1. 实现少图片的无限循环和定时
 2. 实现多图片浏览的性能优化
 
+### 封装轮播器
+* 可以自己尝试封装轮播器,别人可通过imageNames和设置frame来使用
+* 将功能封装到一个View即可
 
-
-
-
-
+```objectivec
+//重新设置imageNames要删除之前的imageNames
+//不提倡这样遍历,开发中原则上不要边遍历里面的东西边删除里面的东西
+//    for (UIImageView *imageView in imageNames) {
+//        [imageView removeFromSuperview];
+//    }
+    // 让subviews这个数组中每一个对象都执行removeFromSuperview
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+```
