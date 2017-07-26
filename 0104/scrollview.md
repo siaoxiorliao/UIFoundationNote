@@ -16,13 +16,17 @@ CGPoint offset = CGPointMake(offsetX, offsetY);
 }
 ```
 
-**contentInset** 在四周增加的内边距,和contentOffset无关系(用户滑动查看歌词)
-
+**contentInset** 在四周增加的内边距,和contentOffset无关系(用户滑动查看歌词)  
 scrollEnable 是否可滚动 默认YES
+
 bounces  是否有弹性 默认YES
+
 showHorizontalScrollIndicatior 是否显示水平滚动条 默认YES
+
 showVerticalScrollIndicaior 是否显示竖直滚动条 默认YES
+
 alwaysBounceHorizontal 是否水平滚动 默认NO,如果bounces是YES,也可以水平滚动
+
 alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以竖直滚动
 
 ![](/0104/images/WX20170725-140222.png)
