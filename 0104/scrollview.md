@@ -234,7 +234,9 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
      [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 -(void)stopTimer{
+    NSLog(@"%@",self.timer);
     [self.timer invalidate];
+    NSLog(@"%@",self.timer);
 }
 -(void)nextPage{
     NSInteger page = self.pageControl.currentPage + 1;
