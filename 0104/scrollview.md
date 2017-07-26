@@ -229,6 +229,7 @@ alwaysBounceVertical 是否竖直滚动 默认NO,如果bounces是YES,也可以�
     -(void)startTimer{
     //自动返回一个自动执行的定时器
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];//加入主线程
     }
     -(void)stopTimer{
     [self.timer invalidate];
