@@ -16,6 +16,7 @@
 "splitter",
 "advanced-emoji",
 
+"highlight",
 
 "-sharing",
 
@@ -42,8 +43,7 @@
 
 "todo",
 
-"prism",
-"-highlight",
+
 
 "github-buttons",
 
@@ -66,11 +66,7 @@
           "tag": "b"
 },
 
-"prism": {
-"css": [
-"prismjs/themes/prism-okaidia.css"
-]
-},
+
 
 "tbfed-pagefooter": {
 "copyright":"Copyright &copy siaoxiorliao 2017",
