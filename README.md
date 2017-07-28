@@ -7,7 +7,7 @@
 
 
 <!--sec data-title="contact" data-id="section0" data-show=true ces-->
-email: siaoxiorliao@126.com  
+Email: siaoxiorliao@126.com  
 Wechat: siaoxiorliao
 <!--endsec-->
 
