@@ -29,7 +29,7 @@
 
 ## 其他
 
-* [语法外传-超级训练机器😎](grammar/grammar.md)
+* [语法外传-超级训练机器😎😎😎](grammar/grammar.md)
 * [shortcutKey 快捷键集合](shortcutkey/shortcutkey.md)
 * [gitbookLearning](gitbookLearning/gitbooklearning.md)
 
