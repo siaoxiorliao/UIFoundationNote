@@ -33,6 +33,7 @@
 
 "-highlight",
 "prism",
+"prism-themes",
 
 
 "tbfed-pagefooter",
@@ -96,7 +97,7 @@
 
 
 "prism": { 
-"css": ["prismjs/themes/prism-okaidia.css"]
+"css": ["prism-themes/themes/prism-duotone-dark.css"]
 },
 
 "anchor-navigation-ex": {
