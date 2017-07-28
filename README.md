@@ -11,8 +11,6 @@ Email: siaoxiorliao@126.com
 Wechat: siaoxiorliao
 <!--endsec-->
 
-<button class="section" target="section0" show="open" hide="close"></button>
-
 
 🙃🙃🙃🙃🙃🙃🙃🙃🙃🙃
 
