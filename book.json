@@ -92,7 +92,7 @@
 },
 
 "highlight": {
-"styles" : "tomorrow-night-eighties"
+"css" : ["tomorrow-night-eighties"]
 },
 
 "anchor-navigation-ex": {
