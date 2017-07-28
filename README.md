@@ -6,7 +6,7 @@
 >  * swift虽好,但没有系统的教程
 
 
-<!--sec data-title="contact" data-id="section0" data-show=false ces-->
+<!--sec data-title="contact" data-id="section0" data-show=true ces-->
 Email: siaoxiorliao@126.com  
 Wechat: siaoxiorliao
 <!--endsec-->
