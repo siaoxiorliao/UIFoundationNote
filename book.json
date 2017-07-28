@@ -91,6 +91,10 @@
 "defineWord" : ["Gitbook Use"]
 },
 
+"highlight": {
+"style" : ["tomorrow-night-eighties"]
+},
+
 "anchor-navigation-ex": {
             "isRewritePageTitle": false,
             "isShowTocTitleIcon": true,
