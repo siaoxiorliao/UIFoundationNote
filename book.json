@@ -97,7 +97,7 @@
 
 
 "prism": { 
-"css": ["themes/prism-xonokai.css"]
+"css": ["prism-themes/themes/prism-xonokai.css"]
 },
 
 "anchor-navigation-ex": {
