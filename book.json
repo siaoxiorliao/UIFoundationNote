@@ -31,6 +31,9 @@
 
 "toggle-chapters",
 
+"-highlight",
+"prism",
+
 
 "tbfed-pagefooter",
 
@@ -91,8 +94,9 @@
 "defineWord" : ["Gitbook Use"]
 },
 
-"highlight": {
-"css" : ["tomorrow-night-eighties"]
+
+"prism": { 
+"css": ["prismjs/themes/prism-okaidia.css"]
 },
 
 "anchor-navigation-ex": {
