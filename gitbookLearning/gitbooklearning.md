@@ -71,6 +71,7 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
 
 "prism",
 "-highlight",//使用代码高亮,需要拷贝文件到插件目录,css我使用的在**下方**
+"prism-themes",
 
 "tbfed-pagefooter",//底部显示信息
 
@@ -115,13 +116,13 @@ Editor是gitbook出的编辑器,可以支持上传到gitHub和gitBook端,想要�
           "tag": "b"
 },
 
-/*
+
 "prism": {
             "css": [
                 "prism-themes/themes/prism-okaidia.css"
             ]
 },
-*/
+
 
 "tbfed-pagefooter": {
 "copyright":"Copyright &copy siaoxiorliao 2017",
