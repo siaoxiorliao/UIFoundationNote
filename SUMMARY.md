@@ -26,7 +26,7 @@
   * [常见控件的监听/退出键盘和textField](0104/monitor.md)
 * [\*0105/屏幕适配/autoresizingMask/autolayout/VFL/Masonry](0105/0105.md)
 * [\*0107/UITableView,controller,cell重用和性能优化](0107/0107.md)
-* [0108/自定义cell和cell等高和不等高](0108/0108.md)
+* [0108/tableview索引条/自定义cell和cell等高和不等高](0108/0108.md)
 
 ## 其他
 
