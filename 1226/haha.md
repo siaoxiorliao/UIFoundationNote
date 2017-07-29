@@ -29,6 +29,7 @@
 ## 设置UIImageView的frame方式
 
 ```objectivec
+
 //1.
 imageView.frame = CGRectMake(100,100,267,400);
 //2.
@@ -44,6 +45,7 @@ UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGMake(100,100,267,40
 UIImageView *imageView = [[UIImageView alloc]initWithImage:@"1")];(默认有尺寸,尺寸就是图片的尺寸)
  ImageView.center = CGPointMake
 (self.view.frame.size.width * 0.5,self.view.size.height * 0.5);//(位置)
+
 ```
 
 
