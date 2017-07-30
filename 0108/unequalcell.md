@@ -122,7 +122,7 @@ cellForRowAtIndexPath-setStatus-heightForRowAtIndexPath-layoutSubviews批次调�
 ![](/0108/images/WX20170730-210446.png)
 
 * MVVM优势
-> 更加容易测试,代码移植性变好,兼容MVC
+> Controller更加瘦身,更加容易测试,代码移植性变好,兼容MVC
 * MVVM弱势
 > 类数量增加,一层一层的,viewModel会越来越庞大,调用复杂度增加
  
