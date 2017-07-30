@@ -80,8 +80,10 @@ XMGCell.m
 ![](/0108/images/WX20170730-101223.png)
 
 # storyboard 自定义等高cell
-
-* 在storyboard中拖入cell当成xib来设置控件 位置 尺寸 约束 或标识 即可
+* storyboard自定义cell使用代码注册没有相应添加标识的方法
+**代码主动注册方式优先级>storyboard给定标识**,所以使用代码注册会报错
+* 用storyboard方式自定义cell不用注册,直接在inspector设置标识即可
+* 在storyboard中拖入cell当成xib来设置控件 位置 尺寸 约束 标识 即可
 * 不同cell共存也是同样滴套路..
 
 
