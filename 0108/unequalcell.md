@@ -1,5 +1,6 @@
 # 自定义不等高cell
-
+## 计算frame
+**160108-16-15**
 * UILabel大小随着字体大小而改变
 ```objectivec
     #define nameFont [UIFont systemFontOfSize:17]
@@ -33,5 +34,5 @@
     CGFloat textH = [self.status.text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAtt context:nil].size.height;
     self.text_Label.frame = CGRectMake(textX, textY, textW, textH);
 ```
-## cellHeight
+## cellHeight返回方式  160108-17-15
 * 因为控制器加载tableview先会调用heightForRowAtIndexPath方法确定cell的高度再加载cell(调用layoutsubviews方法),所以需要在return cellHeight之前确定cellHeight,正常来说可以在return cellHeight之前再次计算cellHeight可以达到不等高cell的效果,但是这里重复代码过多并且重新计算了.因为需要改变cellHeight加载方式 :
