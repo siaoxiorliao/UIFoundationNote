@@ -87,11 +87,17 @@ XMGCell.m
 * 不同cell共存也是同样滴套路..
 
 ## storyboard中不同cell的共存
-* 设置prototype cells数目就可以在storyboard中添加cell(也可以直接拖,属性会自动增加),再根据标识显示不同cell即可.
+* cell分为动态cell(dynamic prototypes)和静态cell(static cells)
+* 动态cell设置prototype cells数目就可以在storyboard中添加cell(也可以直接拖,属性会自动增加),再根据标识显示不同cell即可.
 
 # 自定义分割线
 * 设置separator style为none,往cell中增加view即可
 * 最小约束高度为1,设置透明度,视觉效果上小了一点.
+
+# 静态cell
+* 主要用来表示app的设置界面
+* 静态cell的cell内容是确定的,主要通过section(组)来确定界面
+
 
 
 
