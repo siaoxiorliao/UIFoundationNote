@@ -38,9 +38,9 @@
 
 * 因为控制器加载tableview先会调用heightForRowAtIndexPath方法确定cell的高度再加载cell(调用layoutsubviews方法),所以需要在return cellHeight之前确定cellHeight,正常来说可以在return cellHeight之前再次计算cellHeight可以达到不等高cell的效果,但是这里重复代码过多并且重新计算了,每次重用或layoutsubviews都会再次计算**160108-17-15**
 > 调用顺序
-heightForRowAtIndexPath cellHeight 批次调用-> 
+heightForRowAtIndexPath-cellHeight 批次调用-> 
 heightForRowAtIndexPath 批次调用->//苹果再次重新设置以保证全部设置好  
-cellForRowAtIndexPath setStatus heightForRowAtIndexPath批次调用(只调用显示的,重用则再次调用这三个)
+cellForRowAtIndexPath-setStatus-heightForRowAtIndexPath-layoutSubviews批次调用(只调用显示的,重用则再次调用这四个)
 
 
 因此需要改变cellHeight加载方式 :     **160111-01-24**
@@ -48,6 +48,8 @@ cellForRowAtIndexPath setStatus heightForRowAtIndexPath批次调用(只调用显
  * cellHeight只依赖于模型
  * 将frame和cellHeight加入模型中
  * 因为每单个模型cellHeight只需要在第一次使用才计算,重用后只需访问之前已经计算好的即可,这里就使用懒加载思路,cellHeight如果等于0表示之前没有计算过,重新计算.cellHeight不等于0,说明已经计算过,直接返回之前计算了的即可.
+ 
+ > 这样就保证了 先设置了模型数据再layoutsubviews(因此也可以把layoutsubviews)
  
 **代码**
 ```objectivec
@@ -113,7 +115,16 @@ cellForRowAtIndexPath setStatus heightForRowAtIndexPath批次调用(只调用显
 }
 @end
 ```
- 
+
+# 扩展_____MVC和MVVM(Model View ViewModel)设计模式
+* 屏蔽了View和Model的关系,ViewModel通过Model呈现
+
+![](/0108/images/WX20170730-210446.png)
+
+* MVVM优势
+> 更加容易测试,代码移植性变好,兼容MVC
+* MVVM弱势
+> 类数量增加,一层一层的,viewModel会越来越庞大,调用复杂度增加
  
  
 
