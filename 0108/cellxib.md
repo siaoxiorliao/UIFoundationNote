@@ -75,7 +75,7 @@ XMGCell.m
     self.tableView.rowHeight = 70;
 ```
     
-# 不同cell共存
+# xib中不同cell共存
 * 注册和绑定不同标识即可
 ![](/0108/images/WX20170730-101223.png)
 
@@ -86,6 +86,12 @@ XMGCell.m
 * 在storyboard中拖入cell当成xib来设置控件 位置 尺寸 约束 标识 即可
 * 不同cell共存也是同样滴套路..
 
+## storyboard中不同cell的共存
+* 设置prototype cells数目就可以在storyboard中添加cell(也可以直接拖,属性会自动增加),再根据标识显示不同cell即可.
+
+# 自定义分割线
+* 设置separator style为none,往cell中增加view即可
+* 最小约束高度为1,设置透明度,视觉效果上小了一点.
 
 
 
