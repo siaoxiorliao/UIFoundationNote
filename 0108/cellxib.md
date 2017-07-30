@@ -29,7 +29,7 @@
 }
 ```
 # xib 自定义等高cell 
-* 在xib中设置 位置 尺寸 约束 等
+* 在xib中设置 控件 位置 尺寸 约束 或标识 即可
 * 只需创建自定义的cell类并在类中设置数据即可.
 > 也可通过also create xib同时创建xib和cell类,并且它们是已经绑定好的
 
@@ -69,10 +69,21 @@ XMGCell.m
     // cellForRowAtIndexPath
     XMGTgCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     ```
-
-
+    
+* 通过xib创建cell默认高度是44,因为cell的高度是由tableView决定的,所以在xib设置高度是没有效果的,只需在控制器中设置cell高度即可
+```objectivec
+    self.tableView.rowHeight = 70;
+```
+    
 # 不同cell共存
 * 注册和绑定不同标识即可
 ![](/0108/images/WX20170730-101223.png)
+
+# storyboard 自定义等高cell
+
+* 在storyboard中拖入cell当成xib来设置控件 位置 尺寸 约束 或标识 即可
+* 不同cell共存也是同样滴套路..
+
+
 
 

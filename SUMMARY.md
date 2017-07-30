@@ -27,7 +27,7 @@
 * [\*0105/屏幕适配/autoresizingMask/autolayout/VFL/Masonry](0105/0105.md)
 * [\*0107/UITableView,controller,cell重用和性能优化](0107/0107.md)
 * [0108/tableview索引条/自定义等高cell纯代码frame和autolayout](0108/0108.md)
-  * [xib等高cell](0108/cellxib.md)
+  * [xib,storyboard等高cell](0108/cellxib.md)
 
 ## 其他
 
