@@ -33,7 +33,7 @@
 * 只需在自定义的cell类中设置数据即可.
 
 ```objectivec
-
+XMGCell.m
 #import "XMGTgCell.h"
 #import "XMGTg.h"
 
