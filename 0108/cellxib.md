@@ -29,8 +29,9 @@
 }
 ```
 # xib 自定义等高cell 
-* 在xib中设置 位置尺寸约束等
-* 只需在自定义的cell类中设置数据即可.
+* 在xib中设置 位置 尺寸 约束 等
+* 只需创建自定义的cell类并在类中设置数据即可.
+> 也可通过also create xib同时创建xib和cell类,并且它们是已经绑定好的
 
 ```objectivec
 XMGCell.m
@@ -54,7 +55,24 @@ XMGCell.m
     self.priceLabel.text = [NSString stringWithFormat:@"￥%@",tg.price];
     self.buyCountLabel.text = [NSString stringWithFormat:@"%@人已购买",tg.buyCount];
 }
-
 @end
-
 ```
+
+* **注意 : **为了达到循环利用的效果,需绑定cell标识,可通过以下两种方式
+ 1. 在xib中绑定indentifier
+ 2. 通过注册方式加载的时候就绑定
+    ```objectivec
+    //全局变量
+    NSString *ID = @"tg";
+    //viewDidLoad
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGTgCell class]) bundle:nil] forCellReuseIdentifier:ID];
+    // cellForRowAtIndexPath
+    XMGTgCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    ```
+
+
+# 不同cell共存
+* 注册和绑定不同标识即可
+![](/0108/images/WX20170730-101223.png)
+
+
