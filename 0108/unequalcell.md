@@ -37,6 +37,12 @@
 ## cellHeight返回方式
 
 * 因为控制器加载tableview先会调用heightForRowAtIndexPath方法确定cell的高度再加载cell(调用layoutsubviews方法),所以需要在return cellHeight之前确定cellHeight,正常来说可以在return cellHeight之前再次计算cellHeight可以达到不等高cell的效果,但是这里重复代码过多并且重新计算了,每次重用或layoutsubviews都会再次计算**160108-17-15**
+> 调用顺序
+heightForRowAtIndexPath cellHeight 批次调用-> 
+heightForRowAtIndexPath 批次调用->//苹果再次重新设置以保证全部设置好  
+cellForRowAtIndexPath setStatus heightForRowAtIndexPath批次调用(只调用显示的,重用则再次调用这三个)
+
+
 因此需要改变cellHeight加载方式 :     **160111-01-24**
  * frame只依赖于模型
  * cellHeight只依赖于模型
