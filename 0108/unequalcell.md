@@ -42,10 +42,6 @@ heightForRowAtIndexPath-cellHeight 批次调用->
 heightForRowAtIndexPath 批次调用->//苹果再次重新设置以保证全部设置好(确定滚动条等等)  
 cellForRowAtIndexPath-setStatus-heightForRowAtIndexPath-layoutSubviews批次调用(只调用显示的,重用则再次调用这四个)
 
-* 因此可以设置估算高度,延迟调用heightForRowAtIndexPath方法.
-```objectivec
-    self.tableView.estimatedRowHeight = 80;
-```
 因此需要改变cellHeight加载方式 :     **160111-01-24**
  * frame只依赖于模型
  * cellHeight只依赖于模型
