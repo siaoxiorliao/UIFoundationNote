@@ -24,3 +24,38 @@
     //[self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationLeft];
 ```
 # 左滑删除
+
+```objectivec
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"commitEditingStyle--");
+//    [self.wineArray removeObjectAtIndex:indexPath.row];
+//    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+//}
+
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+    return @"删除";
+//}
+
+//使用此方法则上面的方法被覆盖
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    self.tableView.editing = YES;//让tableview进入编辑模式
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"关注" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+//        [self.tableView reloadData];
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        // 退出编辑模式
+        self.tableView.editing = NO;
+    }];
+    
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+        [self.wineArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }];
+    return @[action1,action];
+}
+```
