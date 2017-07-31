@@ -70,3 +70,38 @@
 ```
 
 # 批量删除
+```objectivec
+- (void)viewDidLoad {
+    [super viewDidLoad];
+//    self.tableView.allowsMultipleSelection = YES;
+    // 告诉tableView在编辑模式下可以多选
+    self.tableView.allowsMultipleSelectionDuringEditing = YES;
+    self.deletedButton.hidden = YES;
+}
+#pragma mark - 按钮的点击
+- (IBAction)MultipleRemove {
+    // 进入编辑模式
+    [self.tableView setEditing:!self.tableView.isEditing animated:YES];
+    self.deletedButton.hidden = !self.tableView.isEditing;
+}
+- (IBAction)remove {
+    // 千万不要一边遍历一边删除,因为每删除一个元素,其他元素的索引可能会发生变化
+    NSMutableArray *deletedWine = [NSMutableArray array];
+    for (NSIndexPath *indexPath in self.tableView.indexPathsForSelectedRows) {
+        [deletedWine addObject:self.wineArray[indexPath.row]];
+    }
+    // 修改模型
+    [self.wineArray removeObjectsInArray:deletedWine];
+    // 刷新表格
+//    [self.tableView reloadData];
+    [self.tableView deleteRowsAtIndexPaths:self.tableView.indexPathsForSelectedRows withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+```
+
+## 自定义批量删除
+* 在contentView中添加imageView,根据用户选择状态设置隐藏与否即可;  
+**160111-17-13**
+* 在模型中保存选中状态 checked
+* 在控制器中设置选中的索引数组,在didSelectRowIndexpath中更新选中和没选中的索引,删除的时候根据选中的索引数组删除对应模型和cell即可....
+
+

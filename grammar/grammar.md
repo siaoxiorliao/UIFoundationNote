@@ -35,6 +35,7 @@ if (!_dataArr)
 !--sec data-title="😳对没对?😳" data-id="section3" data-show=false ces-->
 ```objectivec
 self.tableView.editing = !self.tableView.isEditing;
+self.deletedButton.hidden = !self.tableView.isEditing;
 ```
 <!--endsec-->
 
