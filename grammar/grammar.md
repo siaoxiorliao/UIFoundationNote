@@ -29,3 +29,17 @@ if (!_dataArr)
 
 <button class="section" target="section2" show="👌" hide="🙃"></button>
 
+4 .   取反操作
+
+<
+!--sec data-title="😳对没对?😳" data-id="section3" data-show=false ces-->
+```objectivec
+self.tableView.editing = !self.tableView.isEditing;
+```
+<!--endsec-->
+
+<button class="section" target="section3" show="👌" hide="🙃"></button>
+
+
+
+

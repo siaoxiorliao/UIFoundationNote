@@ -42,7 +42,6 @@
 //使用此方法则上面的方法被覆盖
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    self.tableView.editing = YES;//让tableview进入编辑模式
     UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"关注" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
 //        [self.tableView reloadData];
 //        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
@@ -59,3 +58,15 @@
     return @[action1,action];
 }
 ```
+
+## 编辑模式
+```objectivec
+- (IBAction)remove {
+    // 进入编辑模式
+    //取反
+//    self.tableView.editing = !self.tableView.isEditing;
+    [self.tableView setEditing:!self.tableView.isEditing animated:YES];
+}
+```
+
+# 批量删除
