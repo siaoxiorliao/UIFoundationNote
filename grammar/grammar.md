@@ -35,6 +35,7 @@ if (!_dataArr)
 ```objectivec
 self.tableView.editing = !self.tableView.isEditing;
 self.deletedButton.hidden = !self.tableView.isEditing;
+self.reduceBtn.enabled = (wine.count > 0);
 ```
 <!--endsec-->
 
