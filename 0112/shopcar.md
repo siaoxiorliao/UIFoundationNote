@@ -194,11 +194,11 @@ NSlog(@"reduce");
 
 # 代理优化 - 代理设计模式
 自定义代理
-1. 添加代理属性
+1.添加代理属性
 ```objectivec
 @property (nonatomic, weak) id<XMGWineCellDelegate> delegate;
 ```
-2. 设置代理协议及代理协议方法
+2.设置代理协议及代理协议方法
 
 ```objectivec
 @class XMGWine ,XMGWineCell;
@@ -208,7 +208,7 @@ NSlog(@"reduce");
 - (void)wineCellDidClickMinusButton:(XMGWineCell *)cell;
 @end
 ```
-3. 在必要时刻通知代理执行方法
+3.在必要时刻通知代理执行方法
 
 ```objectivec
 - (IBAction)plusButtonClick {
@@ -221,7 +221,7 @@ NSlog(@"reduce");
     }
 }
 ```
-4. 设置代理属性和对象
+4.设置代理属性和对象
 
 ```objectivec
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -236,20 +236,29 @@ NSlog(@"reduce");
     return cell;
 }
 ```
-5. 设置代理对象遵守协议
+5.设置代理对象遵守协议
 
 ```objectivec
 
 @interface ViewController ()<UITableViewDataSource ,XMGWineCellDelegate ,UITableViewDelegate>
 ```
 
-6. 让代理对象实现协议方法
+6.让代理对象实现协议方法
 
 ```objectivec
 - (void)wineCellDidClickPlusButton:(XMGWineCell *)cell
 {
     NSLog(@"wineCellDidClickPlusButton");
 }
+```
+## 代理专业做法
+* 调用代理方法可能代理有实现也没有实现(@optional)
+* 为了严谨,在调用前可判断代理有没有实现协议的方法
+
+```objectivec
+if ([self.delegate respondsToSelector:@selector(wineCellDidClickMinusButton:)]) {
+        [self.delegate wineCellDidClickMinusButton:self];
+    }
 ```
 
 
