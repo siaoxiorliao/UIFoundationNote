@@ -268,3 +268,10 @@ if ([self.delegate respondsToSelector:@selector(wineCellDidClickMinusButton:)]) 
 > wineCellDidClickAddButton
 > wineCellDidClickReduceButton
 > @property(weak,nonatomic) id<WineCellDelegate> delegate;
+
+## 其他的监听
+* addTarget(UIControl)
+* block
+等等
+# 选择
+* 一般最好使用代理,比较规范,如果需要多个对象监听就使用通知,如果要监听属性改变则用KVO
