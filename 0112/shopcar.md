@@ -27,7 +27,7 @@
 * 不同点: 代理 : 1个对象只能告诉另1个对象发生了什么事情
 通知 : 1个对象能告诉N个对象发生了什么事情, 1个对象能得知N个对象发生了什么事情
 
-# 通知使用
+# 通知监听
 * 通过通知发布和通知监听来监听动作
 
 **code 160112-01**
@@ -147,6 +147,53 @@ ViewController
 }
 ```
 
-###
+## kVO 性能问题
+* 使用KVO属性监听的类,系统默认会为其创建一个子类 NSKVONotifying_类名
+
+# 代理监听
+* 普通的代理监听
+
+```objectivec
+cell.h
+@property(weak,nonatomic) ViewController *delegate
+
+cell.m
+#import "ViewController.h"
+- (IBAction)clickAddBtn {
+    [self.delegate add];
+}
+-
+(IBAction)reduceBtn {
+[self.delegate reduce];
+}
+
+ViewController.h
+-(void)add;
+-(void)reduce;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *ID = @"wine";
+    WineCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell.wine = self.wines[indexPath.row];
+    //设置代理
+    cell.delegate = self;
+    return cell;
+}
+
+ViewController.m
+-(void)add;{
+NSlog(@"add");
+}
+-
+(void)reduce;{
+NSlog(@"reduce");
+}
+
+```
+
+> 这样的方法只限定了ViewController才能成为代理,耦合性高.
+
+## 代理优化 - 代理设计模式
+1. 拟定
+
 
 
