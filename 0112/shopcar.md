@@ -202,6 +202,7 @@ NSlog(@"reduce");
 
 ```objectivec
 @class XMGWine ,XMGWineCell;
+//遵守基协议
 @protocol XMGWineCellDelegate <NSObject>
 @optional
 - (void)wineCellDidClickPlusButton:(XMGWineCell *)cell;
@@ -256,9 +257,14 @@ NSlog(@"reduce");
 * 为了严谨,在调用前可判断代理有没有实现协议的方法
 
 ```objectivec
+//判断有没有实现协议的方法
 if ([self.delegate respondsToSelector:@selector(wineCellDidClickMinusButton:)]) {
         [self.delegate wineCellDidClickMinusButton:self];
     }
 ```
 
-
+* 代理协议和方法定义有专业的命名,主要模仿官方的命名规范
+> WineCellDelegate
+> wineCellDidClickAddButton
+> wineCellDidClickReduceButton
+> @property(weak,nonatomic) id<WineCellDelegate> delegate;
