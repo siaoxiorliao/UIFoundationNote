@@ -275,3 +275,8 @@ if ([self.delegate respondsToSelector:@selector(wineCellDidClickMinusButton:)]) 
 等等
 # 选择
 * 一般最好使用代理,比较规范,如果需要多个对象监听就使用通知,如果要监听属性改变则用KVO
+
+# 购物车性能优化
+**code 160112-04**
+* 结算和清空购物车都是遍历全部模型数组,可以进行优化
+* 用一个数组保存选择的cell,之前选过的则不用加入购物车,改变count就行,之前没选过的就加入数组.
