@@ -192,8 +192,64 @@ NSlog(@"reduce");
 
 > 这样的方法只限定了ViewController才能成为代理,耦合性高.
 
-## 代理优化 - 代理设计模式
-1. 拟定
+# 代理优化 - 代理设计模式
+自定义代理
+1. 添加代理属性
+```objectivec
+@property (nonatomic, weak) id<XMGWineCellDelegate> delegate;
+```
+2. 设置代理协议及代理协议方法
 
+```objectivec
+@class XMGWine ,XMGWineCell;
+@protocol XMGWineCellDelegate <NSObject>
+@optional
+- (void)wineCellDidClickPlusButton:(XMGWineCell *)cell;
+- (void)wineCellDidClickMinusButton:(XMGWineCell *)cell;
+@end
+```
+3. 在必要时刻通知代理执行方法
+
+```objectivec
+- (IBAction)plusButtonClick {
+    self.wine.count ++ ;
+    self.countLabel.text = [NSString stringWithFormat:@"%d",self.wine.count];
+    self.minusButton.enabled = YES;
+    //通知代理执行协议中的方法
+    if ([self.delegate respondsToSelector:@selector(wineCellDidClickPlusButton:)]) {
+        [self.delegate wineCellDidClickPlusButton:self];
+    }
+}
+```
+4. 设置代理属性和对象
+
+```objectivec
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"wine";
+    XMGWineCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    // 传递模型
+    cell.wine = self.wineArray[indexPath.row];
+    // 设置代理
+    cell.delegate = self;
+    
+    return cell;
+}
+```
+5. 设置代理对象遵守协议
+
+```objectivec
+
+@interface ViewController ()<UITableViewDataSource ,XMGWineCellDelegate ,UITableViewDelegate>
+```
+
+6. 让代理对象实现协议方法
+
+```objectivec
+- (void)wineCellDidClickPlusButton:(XMGWineCell *)cell
+{
+    NSLog(@"wineCellDidClickPlusButton");
+}
+```
 
 
