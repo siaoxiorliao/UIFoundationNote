@@ -31,7 +31,7 @@
   * [\*\*frame不等高cell/UILabel的frame计算/cellHeight计算和加载方式](0108/unequalcell.md)
 * [0111/storyboard不等高cell](0111/0111.md)
   * [tableView数据刷新/左滑删除](0111/reloaddata.md)
-* [0112/购物车综合示例](0112/shopcar.md)
+* [0112/购物车综合示例/通知/KVO/代理设计模式的应用](0112/shopcar.md)
 
 ## 其他
 
