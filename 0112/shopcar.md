@@ -147,7 +147,7 @@ ViewController
 }
 ```
 
-## kVO 性能问题
+## KVO 性能问题
 * 使用KVO属性监听的类,系统默认会为其创建一个子类 NSKVONotifying_类名
 * 这个子类重写了set方法,当值改变时在set里面通知我们的对象.
 
