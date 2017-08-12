@@ -191,8 +191,9 @@ goodsView.frame = CGRectMake(x, y, width, height);
 ```
 ---
 ### 总结:
-创建自定义的类,一般要提供init,initWith对象方法,[类 类方法]
-来提供初始化的接口...特别是模型,以后从服务器取数据多依靠模型来设置数据....
+* 创建自定义的类,一般要提供init,initWith对象方法,[类 类方法]
+来提供初始化的接口,如果和视图有关,则要同时提供initWithFrame,awakeFromNib构造方法(一般抽取setUp来初始化控件),再再layoutSubView里面布局子控件,如果有数据,则提供传数据的initWith,类名With的初始化方法并同样抽取设置数据的方法(这里重写模型setter方法)和在相应初始化方法里设置数据
+* ...特别是模型,以后从服务器取数据多依靠模型来设置数据....
 
 
 
